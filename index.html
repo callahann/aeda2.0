@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>aeda2.0</title>
+    <title>AEDA</title>
+	 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+	 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	
+	<link href="../static/estilos.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="app"></div>
+  	<!-- Barra de navegación -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#"><img src="../static/images/aeda_png.png" alt="Logo AEDA" style="height:70px;"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse row" id="navbarNav">
+			 <div class="col-md-7"></div>
+			<ul class="navbar-nav col-md-5" >
+			  <li class="nav-item active">
+			    <a class="nav-link" href="#/">Inicio<span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#/adopciones">Adopciones</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Donaciones</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#/voluntariado">Voluntariado</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">¿Quiénes somos?</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Actividades</a>
+			  </li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- FIN Barra de navegación -->
+		<div class="main">
+
+    		<div id="app"></div>
+
+    		<div class="footer">
+				 <div class="social row">
+			 	 <a class="col-md-3"  href="$"><img class="icon " src="../static/images/facebook.png" alt=""></a>
+				 <a class="col-md-3" href="%"> <img class="icon" src="../static/images/instagram.png" alt=""></a>
+				 <a class="col-md-3" href="/"><img class="icon " src="../static/images/twitter.png" alt=""></a>
+		    </div>
+		</div>
+    	</div>	
     <!-- built files will be auto injected -->
   </body>
 </html>
