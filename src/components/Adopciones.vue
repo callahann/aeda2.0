@@ -32,11 +32,11 @@
 
 				
 				<modal v-if="abierto" name="adoptar" :clickToClose="false" height="auto" :scrollable="true">
-				  	<formulario
-				  	v-bind:tipo_adopcion=this.tipo_adopcion></formulario>
-				  	<div class="panel-footer">
-				  	<button v-on:click="cerrar" type="button" class="btn btn-default">Cerrar</button>
-				  	</div>
+					 <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
+				  	 	   <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
+				  	 </div>
+				  	<formulario v-bind:tipo_adopcion=this.tipo_adopcion></formulario>
+				  	
 				</modal>
 
 		</div>
