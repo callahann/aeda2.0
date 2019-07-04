@@ -65,12 +65,8 @@
 			<div class="col-md-1"></div>
 			<div class="aside col-md-3" style="margin-top: 20px;">
 				
-				<div class="perritos col">
-					<img class="perrito" src="../assets/images/perrito400400.png" alt="">
-					<img class="perrito" src="../assets/images/perrito400400.png" alt="">
-					<img class="perrito" src="../assets/images/perrito400400.png" alt="">
-					<img class="perrito" src="../assets/images/perrito400400.png" alt="">
-					<img class="perrito" src="../assets/images/perrito400400.png" alt="">
+				<div v-for="perro in perros.slice(0, 3)" class="perritos col">
+					<img class="perrito" :src=perro.url alt="">
 					
 				</div>
 
@@ -80,10 +76,18 @@
   </div>
 </template>
 <script>
-  export default{
-    data(){
-      return{
-      }
-    }
-  }
+	import axios from 'axios';
+  	export default{
+    	data(){
+	      return{
+	      	perros: []
+	      }
+	    },
+	    created: function(){
+	    	axios.get('http://localhost:3000/mascotas')
+	            .then(response => {
+	                this.perros = response.data;     
+	            });
+	    }
+	  }
 </script>
