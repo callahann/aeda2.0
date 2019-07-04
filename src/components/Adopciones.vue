@@ -11,7 +11,7 @@
 
 			<div class="parrafoder col-md-6">
 			    <div class="boton col-md-6 text-center">
-			    	<a href="#" class="btn btn-success" role="button"><b>¡Quiero adoptar!</b></a>
+			    	<a href="#" @click="adoptarGeneral" class="btn btn-success" role="button"><b>¡Quiero adoptar!</b></a>
 			    </div>
 				
 				
@@ -19,107 +19,65 @@
 
 			</div>
 			
-				<div class="col-md-3 text-center">
+				<div v-for="perro in perros" class="col-md-3 text-center">
 					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/tigrito.png" class="card-img-top" alt="...">
+					  <img @click="adoptarEspecifico" :src=perro.url class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Tigrito</b></h5>
-					    <p class="card-text">Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos</p>
+					    <h5 class="card-title text-center"><b>{{perro.nombre}}</b></h5>
+					    <p class="card-text">{{perro.descripcion}}</p>
 					   
 					  </div>
 				   </div>
 				</div>
 
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/gamboa.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Gamboa</b></h5>
-					    <p class="card-text">Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón</p>
-					   
-					  </div>
-				   </div>
-				</div>
-
-
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/cleto.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Cleto</b></h5>
-					    <p class="card-text">Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón. </p>
-					   
-					  </div>
-				   </div>
-				</div>
-
-
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/canica.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Canica</b></h5>
-					    <p class="card-text">Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona</p>
-					   
-					  </div>
-				   </div>
-				</div>
-
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/lenteja.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Lenteja</b></h5>
-					    <p class="card-text">Esta hermosa amiga es conocida en la universidad por su gran actitud y todo el amor que tiene para entregar</p>
-					   
-					  </div>
-				   </div>
-				</div>
-
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/gamboa.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Gamboa</b></h5>
-					    <p class="card-text">Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón</p>
-					   
-					  </div>
-				   </div>
-				</div>
-
-
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/cleto.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Cleto</b></h5>
-					    <p class="card-text">Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón. </p>
-					   
-					  </div>
-				   </div>
-				</div>
-
-
-				<div class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
-					  <img src="../assets/images/canica.png" class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Canica</b></h5>
-					    <p class="card-text">Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona</p>
-					   
-					  </div>
-				   </div>
-				</div>
-
+				
+				<modal v-if="abierto" name="adoptar" :clickToClose="false" height="auto" :scrollable="true">
+				  	<formulario
+				  	v-bind:tipo_adopcion=this.tipo_adopcion></formulario>
+				  	<div class="panel-footer">
+				  	<button v-on:click="cerrar" type="button" class="btn btn-default">Cerrar</button>
+				  	</div>
+				</modal>
 
 		</div>
   </div>
 </template>
 <script>
-  export default{
-    data(){
-      return{
-      }
-    }
-  }
+	import axios from 'axios';
+	import Formulario from './Formulario'
+  	export default{
+    	data(){
+	      return{
+	      	perros: [],
+	      	abierto: false,
+	      	tipo_adopcion: ''
+	      }
+	    },
+	    created: function(){
+	    	axios.get('http://localhost:3000/mascotas')
+            .then(response => {
+                this.perros = response.data;
+                console.log(this.perros);     
+            });
+	    },
+	    methods:{
+	    	adoptarGeneral: function(){
+	    		this.abierto = true;
+	    		this.tipo_adopcion = 1;
+	    		this.$modal.show('adoptar');
+	    	},
+	    	adoptarEspecifico: function(){
+	    		this.abierto = true;
+	    		this.tipo_adopcion = 2;
+	    		this.$modal.show('adoptar');
+	    	},
+	    	cerrar: function(){
+	    		this.abierto = false;
+	    		this.$modal.hide('adoptar');
+	    	}
+	    },
+	    components: {
+			'formulario': Formulario
+		}
+	  }
 </script>

@@ -3,37 +3,26 @@
     {
       "id": 1,
       "nombre": "Tigrito",
-      "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos"
+      "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
+      "url":"https://placedog.net/400/400/500"
     },
     {
       "id": 2,
       "nombre": "Gamboa",
-      "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón."
+      "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
+      "url":"https://placedog.net/400/400/501"
     },
     {
       "id": 3,
       "nombre": "Cleto",
-      "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón."
+      "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
+      "url":"https://placedog.net/400/400/502"
     },
     {
       "id": 4,
       "nombre": "Canica",
-      "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona"
-    },
-    {
-      "nombre": "pico",
-      "descripcion": "asdasda",
-      "id": 5
+      "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
+      "url":"https://placedog.net/400/400/503"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
