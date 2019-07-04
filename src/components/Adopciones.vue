@@ -20,7 +20,7 @@
 			</div>
 			
 				<div v-for="perro in perros" class="col-md-3 text-center">
-					<div class="card col-md-12" style="width: 18rem;">
+					<div class="card col-md-12" style="width: 18rem; cursor:pointer;">
 					  <img @click="adoptarEspecifico" :src=perro.url class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title text-center"><b>{{perro.nombre}}</b></h5>
@@ -42,6 +42,11 @@
 		</div>
   </div>
 </template>
+<style>
+	.card:hover{
+		background-color:rgba(173, 234, 206,0.3);
+	}
+</style>
 <script>
 	import axios from 'axios';
 	import Formulario from './Formulario'
