@@ -4,6 +4,9 @@ import Home from '@/components/Home'
 import Voluntariado from '@/components/Voluntariado'
 import Adopciones from '@/components/Adopciones'
 import Formulario from '@/components/Formulario'
+import Adminadopciones from '@/components/Adminadopciones'
+import Adminvoluntariado from '@/components/Adminvoluntariado'
+import Admininicio from '@/components/Admininicio'
 
 Vue.use(Router)
 
@@ -29,5 +32,20 @@ export default new Router({
       name: 'formulario',
       component: Formulario
     },
+    {
+      path: '/admin',
+      name: 'Admininicio',
+      component: Admininicio
+    },
+    {
+      path: '/admin/adopciones',
+      name: 'Adminadopciones',
+      component: Adminadopciones
+    },
+    {
+      path: '/admin/voluntariado',
+      name: 'Adminadopciones',
+      component: Adminvoluntariado
+    }
   ]
 })
