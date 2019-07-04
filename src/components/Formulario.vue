@@ -29,12 +29,12 @@
 						
 						  <button type="submit" class="btn btn-primary">Enviar</button>
 						</form>
-				  <div class="col-md-3 text-center">
+				  <div v-if="tipo_adopcion==2" class="col-md-3 text-center">
 					<div class="card col-md-12" style="width: 18rem;">
-					  <!-- <img src="images/tigrito.png" class="card-img-top" alt="..."> -->
+					  <img :src=perro.url class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title text-center"><b>Tigrito</b></h5>
-					    <p class="card-text">Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos</p>
+					    <h5 class="card-title text-center"><b>{{perro.nombre}}</b></h5>
+					    <p class="card-text">{{perro.descripcion}}</p>
 					   
 					  </div>
 				   </div>
@@ -46,8 +46,20 @@
 	</div>
 </template>
 <script>
+	import axios from 'axios';
 	export default{
-		props:['tipo_adopcion']
+		data(){
+			return{
+				perro: {}
+			}
+		},
+		props:['tipo_adopcion', 'perroSeleccionado'],
+		created: function(){
+			axios.get('http://localhost:3000/mascotas/'+ this.perroSeleccionado)
+            .then(response => {
+                this.perro = response.data;     
+            });
+		}
 
 	}
 </script>
