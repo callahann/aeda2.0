@@ -4,73 +4,125 @@
       "id": 1,
       "nombre": "Tigrito",
       "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
-      "url":"https://placedog.net/400/400/500"
+      "url": "https://placedog.net/400/400/500"
     },
     {
       "id": 2,
       "nombre": "Gamboa",
       "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
-      "url":"https://placedog.net/400/400/501"
+      "url": "https://placedog.net/400/400/501"
     },
     {
       "id": 3,
       "nombre": "Cleto",
       "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
-      "url":"https://placedog.net/400/400/502"
+      "url": "https://placedog.net/400/400/502"
     },
     {
       "id": 4,
       "nombre": "Canica",
       "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
-      "url":"https://placedog.net/400/400/503"
+      "url": "https://placedog.net/400/400/503"
     },
     {
-      "id": 1,
+      "id": 5,
       "nombre": "Tigrito",
       "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
-      "url":"https://placedog.net/400/400/504"
+      "url": "https://placedog.net/400/400/504"
     },
     {
-      "id": 2,
+      "id": 6,
       "nombre": "Gamboa",
       "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
-      "url":"https://placedog.net/400/400/505"
+      "url": "https://placedog.net/400/400/505"
     },
     {
-      "id": 3,
+      "id": 7,
       "nombre": "Cleto",
       "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
-      "url":"https://placedog.net/400/400/521"
+      "url": "https://placedog.net/400/400/521"
     },
     {
-      "id": 4,
+      "id": 8,
       "nombre": "Canica",
       "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
-      "url":"https://placedog.net/400/400/507"
+      "url": "https://placedog.net/400/400/507"
     },
     {
-      "id": 1,
+      "id": 9,
       "nombre": "Tigrito",
       "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
-      "url":"https://placedog.net/400/400/508"
+      "url": "https://placedog.net/400/400/508"
     },
     {
-      "id": 2,
+      "id": 10,
       "nombre": "Gamboa",
       "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
-      "url":"https://placedog.net/400/400/527"
+      "url": "https://placedog.net/400/400/527"
     },
     {
-      "id": 3,
+      "id": 11,
       "nombre": "Cleto",
       "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
-      "url":"https://placedog.net/400/400/510"
+      "url": "https://placedog.net/400/400/510"
     },
     {
-      "id": 4,
+      "id": 12,
       "nombre": "Canica",
       "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
-      "url":"https://placedog.net/400/400/511"
+      "url": "https://placedog.net/400/400/511"
+    }
+  ],
+  "solicitudes": [
+    {
+      "id": 1,
+      "perro_id": 1,
+      "pendiente": false,
+      "nombre": "asdasd",
+      "apellido": "asdasd",
+      "descripcion": "asdasdasdasdasda",
+      "correo": "hola@usach.cl",
+      "telefono": "12301238"
+    },
+    {
+      "nombre": "gdlfkjgdf",
+      "apellido": "kfjlkgfl",
+      "correo": "nicolas.callahan@usach.cl",
+      "telefono": "1239803",
+      "descripcion": "hkjlmn\nljnklk",
+      "perro_id": 3,
+      "pendiente": true,
+      "id": 2
+    },
+    {
+      "nombre": "aaaaaaaa",
+      "apellido": "aaaaaaaa",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "87654321",
+      "descripcion": "Me gusta el perro.",
+      "perro_id": 4,
+      "pendiente": true,
+      "id": 3
+    },
+    {
+      "nombre": "bbbb",
+      "apellido": "bbbbb",
+      "correo": "bbb@usach.cl",
+      "telefono": "645784329",
+      "descripcion": "oaksdoiajsdpaosdk",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 4
+    },
+    {
+      "nombre": "poiugfghj",
+      "apellido": "oihopojh",
+      "correo": "pojhbnllokjn@usach.cl",
+      "telefono": "10923019231",
+      "descripcion": "CONCHETUMARE",
+      "perro_id": 3,
+      "pendiente": true,
+      "id": 5
     }
   ]
 }

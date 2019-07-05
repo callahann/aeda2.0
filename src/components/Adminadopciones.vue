@@ -21,11 +21,11 @@
       
 
       <div class="container-fluid" style="margin-top: 20px;">
-        <h1>Solicitudes / Adopciones</h1>
+        <h1>Solicitudes de adopciones</h1>
         	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Fecha</th>
+			      <th scope="col">Estado</th>
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Correo</th>
 			      <th scope="col">Mascota de interés</th>
@@ -33,24 +33,28 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <td>02/05/2019</td>
-			      <td>Mark Otto</td>
-			      <td>hola@mdo.com</td>
-			      <td>Tigrito</td>
-			      <td><button class="btn btn-success"><i class="fas fa-plus"></i></button></td>
-			    </tr>
-			    <tr>
-			      <td>02/05/2019</td>
-			      <td>Mark Otto</td>
-			      <td>hola@mdo.com</td>
-			      <td>Tigrito</td>
-			      <td><button class="btn btn-success"><i class="fas fa-plus"></i></button></td>
+			    <tr v-for="solicitud in pendienteSolicitudes">
+			      <td v-if="solicitud.pendiente">Pendiente</td>
+            <td v-else>Contestada</td>
+			      <td>{{solicitud.nombre}} {{solicitud.apellido}}</td>
+			      <td>{{solicitud.correo}}</td>
+            <td v-if="solicitud.perro_id===0">Sin especificar</td>
+			      <td v-else>{{solicitud.perro_nombre}}</td>
+			      <td><button @click="responder(solicitud.id, solicitud.perro_id)" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
 			    </tr>
 			    
 			  </tbody>
 			</table>
       </div>
+      <modal v-if="abierto" name="contestar" :clickToClose="false" height="auto" :scrollable="true">
+           <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
+                 <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
+             </div>
+            <solicitud 
+            v-bind:id_solicitud=this.id_solicitud
+            v-bind:id_perro=this.id_perro></solicitud>
+            
+        </modal>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -58,10 +62,72 @@
 
 </template>
 <script>
+  import axios from 'axios'; 
+  import Solicitud from './Solicitud'
   export default{
     data(){
       return{
+        solicitudes: [],
+        abierto: false,
+        id_perro: '',
+        id_solicitud: ''
       }
+    },
+    created: function(){
+      axios.get('http://localhost:3000/solicitudes')
+        .then(response => {
+          this.solicitudes = response.data;
+          axios.get('http://localhost:3000/mascotas')
+          .then(response => {
+            this.mascotas = response.data;
+            for (var i = 0;i < this.solicitudes.length; i++) {
+              for (var j = 0;j < this.mascotas.length; j++) {
+                if (this.solicitudes[i].perro_id == this.mascotas[j].id) {
+                  this.$set(this.solicitudes[i], 'perro_nombre', this.mascotas[j].nombre);
+                  } 
+                } 
+              }
+            });
+                     
+          console.log(this.solicitudes);
+        });
+    },
+    computed: {
+     pendienteSolicitudes: function() {
+       return this.solicitudes.filter(function(s) {
+         return s.pendiente
+         })
+       } // contains only Alex and James
+     },
+     methods: {
+      responder: function(id_solicitud, id_perro){
+          this.id_solicitud = id_solicitud;
+          this.id_perro = id_perro;
+          this.abierto = true;
+          this.$modal.show('contestar');
+        },
+        cerrar: function(){
+          this.abierto = false;
+          this.$modal.hide('contestar');
+          axios.get('http://localhost:3000/solicitudes')
+          .then(response => {
+            this.solicitudes = response.data;
+            axios.get('http://localhost:3000/mascotas')
+            .then(response => {
+              this.mascotas = response.data;
+              for (var i = 0;i < this.solicitudes.length; i++) {
+                for (var j = 0;j < this.mascotas.length; j++) {
+                  if (this.solicitudes[i].perro_id == this.mascotas[j].id) {
+                    this.$set(this.solicitudes[i], 'perro_nombre', this.mascotas[j].nombre);
+                    } 
+                  } 
+                }
+              });
+          });
+        }
+     },
+     components: {
+      'solicitud': Solicitud
     }
   }
 </script>
