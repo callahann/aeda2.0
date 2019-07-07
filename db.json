@@ -167,5 +167,39 @@
       "texto": "Polémica está generando la posible erradicación de AEDA desde las dependencias de la Universidad de Santiago (USACh), luego que desde la casa de estudios confirmaran que utilizarán los terrenos que actualmente ocupa el grupo.",
       "imagen": "../static/images/noticia3.png"
     }
+  ],
+  "testimoniosadopcion": [
+    {
+      "id": 0,
+      "nombre": "Alexandra",
+      "texto": "Por un lado, es muy hermoso poder ayudarlos, no sé si existe algo que me llene más el corazón que ver feliz a un animalito rescatado, pero está la contraparte que es el no poder ayudarlos a todos y ver día a día cuánto sufrimiento hay en las calles y el poco apoyo que existe para esto, donde las autoridades a veces optan por las “soluciones” más simplistas y crueles de eliminación masiva."
+    },
+    {
+      "id": 1,
+      "nombre": "Enrique",
+      "texto": "una y otra vez, mis mascotas han demostrado que la edad es a menudo sólo un número. Porque tener estos maravillosos amigos en la casa es algo tan poderoso que imprimió en esta mujer el deseo de volver una y otra vez con toda la buena voluntad, a adoptar una de estas mascotas senior."
+    },
+    {
+      "id": 2,
+      "nombre": "Joel",
+      "texto": "Al igual que si adoptaras un animal, el acogerlo temporalmente debe ser una decisión meditada y consensuada con el resto de la familia, ya que es una gran responsabilidad. igualmente se debes valorar el tiempo, espacio y dedicación que puedes proporcionarle."
+    }
+  ],
+  "testimoniosvoluntariado": [
+    {
+      "id": 0,
+      "nombre": "Sofía",
+      "texto": "Ha sido muy gratificante el poder aportar con un granito de arena a esta agrupación, me encantan los animales y me llena el corazón el poder cuidarlos."
+    },
+    {
+      "id": 1,
+      "nombre": "José",
+      "texto": " no se :)"
+    },
+    {
+      "id": 2,
+      "nombre": "Antonia",
+      "texto": " no se :)"
+    }
   ]
 }
