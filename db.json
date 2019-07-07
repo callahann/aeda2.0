@@ -101,7 +101,7 @@
       "telefono": "87654321",
       "descripcion": "Me gusta el perro.",
       "perro_id": 4,
-      "pendiente": true,
+      "pendiente": false,
       "id": 3
     },
     {
@@ -111,7 +111,7 @@
       "telefono": "645784329",
       "descripcion": "oaksdoiajsdpaosdk",
       "perro_id": 0,
-      "pendiente": true,
+      "pendiente": false,
       "id": 4
     },
     {
@@ -133,6 +133,16 @@
       "perro_id": 0,
       "pendiente": false,
       "id": 6
+    },
+    {
+      "nombre": "ssss",
+      "apellido": "ffff",
+      "correo": "effwfwf@dddd.com",
+      "telefono": "242424234",
+      "descripcion": "2424",
+      "perro_id": 0,
+      "pendiente": false,
+      "id": 7
     }
   ],
   "noticias": [
