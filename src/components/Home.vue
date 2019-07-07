@@ -5,67 +5,27 @@
 			<img src="../assets/images/campana_llegoelfrio.jpg" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
 
 			<!-- Cada noticia-->
-			<div class="noticias col"> 
+			<div v-for="noticia in noticias"  class="noticias col"> 
 				<div class="row">
 					<div class="col-md-7">
-						<div class="fecha col-md-12"> 12/04/2019</div>
-						<div class="cuerpo col-md-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos sequi beatae nulla officia animi, soluta, nostrum maxime vel, mollitia rem alias nihil est quisquam et, fugit fugiat ea itaque!</div>
+						<div class="fecha col-md-12 text-left"> {{noticia.fecha}} </div>
+						<div class="fecha col-md-12 text-left"> <b>{{noticia.titulo}}</b> </div>
+						<div class="cuerpo col-md-12 text-justify">{{noticia.texto}}</div>
 					</div>
 				
 					<div class="col md-5">
-						<img class="imagennoticia" src="../assets/images/noticia1.png" alt="">
+						<img class="imagennoticia" :src=noticia.imagen alt="">
 					</div>
 				</div>
 
 			</div>
-			<!-- Cada noticia-->
-			<div class="noticias col"> 
-				<div class="row">
-					<div class="col-md-7">
-						<div class="fecha col-md-12"> 12/04/2019</div>
-						<div class="cuerpo col-md-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos sequi beatae nulla officia animi, soluta, nostrum maxime vel, mollitia rem alias nihil est quisquam et, fugit fugiat ea itaque!</div>
-					</div>
-				
-					<div class="col md-5">
-						<img class="imagennoticia" src="../assets/images/noticia1.png" alt="">
-					</div>
-				</div>
-
-			</div>
-			<!-- Cada noticia-->
-			<div class="noticias col"> 
-				<div class="row">
-					<div class="col-md-7">
-						<div class="fecha col-md-12"> 12/04/2019</div>
-						<div class="cuerpo col-md-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos sequi beatae nulla officia animi, soluta, nostrum maxime vel, mollitia rem alias nihil est quisquam et, fugit fugiat ea itaque!</div>
-					</div>
-				
-					<div class="col md-5">
-						<img class="imagennoticia" src="../assets/images/noticia1.png" alt="">
-					</div>
-				</div>
-
-			</div>
-			<!-- Cada noticia-->
-			<div class="noticias col"> 
-				<div class="row">
-					<div class="col-md-7">
-						<div class="fecha col-md-12"> 12/04/2019</div>
-						<div class="cuerpo col-md-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos sequi beatae nulla officia animi, soluta, nostrum maxime vel, mollitia rem alias nihil est quisquam et, fugit fugiat ea itaque!</div>
-					</div>
-				
-					<div class="col md-5">
-						<img class="imagennoticia" src="../assets/images/noticia1.png" alt="">
-					</div>
-				</div>
-
-			</div>
+		
 			
 			</div>
 			<div class="col-md-1"></div>
-			<div class="aside col-md-3" style="margin-top: 20px;">
+			<div class="aside col-md-3" style="margin-top: 20px; margin-bottom: 50px;">
 				
-				<div v-for="perro in perros.slice(0, 3)" class="perritos col">
+				<div v-for="perro in perros.slice(0, 4)" class="perritos col">
 					<img class="perrito" :src=perro.url alt="">
 					
 				</div>
@@ -80,7 +40,8 @@
   	export default{
     	data(){
 	      return{
-	      	perros: []
+	      	perros: [],
+	      	noticias: []
 	      }
 	    },
 	    created: function(){
@@ -88,6 +49,11 @@
 	            .then(response => {
 	                this.perros = response.data;     
 	            });
+	            axios.get('http://localhost:3000/noticias')
+	            .then(response => {
+	                this.noticias = response.data;     
+	            });
 	    }
+
 	  }
 </script>

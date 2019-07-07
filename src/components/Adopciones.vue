@@ -4,7 +4,7 @@
 
 			<div class="parrafoizq col-md-6">
 				<h1 class="col-md-12"><b>¿Cómo adoptar?</b></h1>
-				<p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro optio facere veritatis, doloremque officia ab quos vitae, et fuga magnam, minus totam animi iusto harum delectus tenetur nihil? Modi, quasi!</p>
+				<p class="col-md-12">Sólo debes tener las ganas y compromiso que significa un nuevo miembro de tu familia, si crees que cumples con ello, solo debes contactarnos a través del formulario y contarnos por qué quieres adoptar y nosotros nos comunicaremos contigo a la brevedad.</p>
 				
 				
 			</div>
@@ -31,7 +31,7 @@
 				</div>
 
 				
-				<modal v-if="abierto" name="adoptar" :clickToClose="false" height="auto" :scrollable="true">
+				<modal v-if="abierto" name="adoptar" :clickToClose="false" :width="800" height="auto" :scrollable="true">
 					 <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
 				  	 	   <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
 				  	 </div>

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nombre": "Tigrito",
-      "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
+      "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos.",
       "url": "https://placedog.net/400/400/500"
     },
     {
@@ -21,55 +21,55 @@
     {
       "id": 4,
       "nombre": "Canica",
-      "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
+      "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona.",
       "url": "https://placedog.net/400/400/503"
     },
     {
       "id": 5,
-      "nombre": "Tigrito",
-      "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
+      "nombre": "Zeus",
+      "descripcion": "Este amigo de 2 años, está en busca de una familia que lo ame, no dudará en llenarte de abrazos cuando llegues a casa.",
       "url": "https://placedog.net/400/400/504"
     },
     {
       "id": 6,
-      "nombre": "Gamboa",
-      "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
+      "nombre": "Princesa",
+      "descripcion": "Esta linda perrita de 2 años está buscando un hogar, es cariñosa, juguetona y alegre, !Hará de tu vida una aventura!.",
       "url": "https://placedog.net/400/400/505"
     },
     {
       "id": 7,
-      "nombre": "Cleto",
-      "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
+      "nombre": "Balti",
+      "descripcion": "Esta pequeña amiga peluda es sumamente juguetona, protectora y ama los cariñitos, solo espera un lugar en tu hogar.",
       "url": "https://placedog.net/400/400/521"
     },
     {
       "id": 8,
-      "nombre": "Canica",
-      "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
+      "nombre": "Vaquita",
+      "descripcion": "Ella es una cachorra de 6 meses, es tranquila y cariñosa, solo busca una familia para darle amor.",
       "url": "https://placedog.net/400/400/507"
     },
     {
       "id": 9,
-      "nombre": "Tigrito",
-      "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos",
+      "nombre": "Vainilla",
+      "descripcion": "Esta cachorra de 5 meses está en busca de un hogar, es protectora y muy alegre.",
       "url": "https://placedog.net/400/400/508"
     },
     {
       "id": 10,
-      "nombre": "Gamboa",
-      "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
+      "nombre": "Dobby",
+      "descripcion": "Esta dama de 10 años es conocida o mimada por todos quienes la conocen, se ha ganado el amor de todos.",
       "url": "https://placedog.net/400/400/527"
     },
     {
       "id": 11,
-      "nombre": "Cleto",
-      "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
+      "nombre": "Toby",
+      "descripcion": "¡Este peludito tiene 3 años y mucho amor para darte! Es un fiel compañero y muy regalón.",
       "url": "https://placedog.net/400/400/510"
     },
     {
       "id": 12,
-      "nombre": "Canica",
-      "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona",
+      "nombre": "Mía",
+      "descripcion": "Es una cachorrita de 5 meses, hoy busca una familia para entregarle amor y felicidad, es muy tranquila y regalora.",
       "url": "https://placedog.net/400/400/511"
     }
   ],
@@ -121,8 +121,41 @@
       "telefono": "10923019231",
       "descripcion": "CONCHETUMARE",
       "perro_id": 3,
-      "pendiente": true,
+      "pendiente": false,
       "id": 5
+    },
+    {
+      "nombre": "Bárbara",
+      "apellido": "Peña",
+      "correo": "barbara.pena.alarcon@gmail.com",
+      "telefono": "0976136226",
+      "descripcion": "ff",
+      "perro_id": 0,
+      "pendiente": false,
+      "id": 6
+    }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "¡AEDA busca nuevos voluntarios!",
+      "fecha": "22 DE MARZO, 2019",
+      "texto": "La Agrupación de Estudiantes por la Defensa de los Animales, está buscando nuevos voluntarios que contribuyan en las labores de la organización, luego de sufrir problemas de espacio durante el año pasado.",
+      "imagen": "../static/images/noticia1.png"
+    },
+    {
+      "id": 2,
+      "titulo": "AEDA:¡Hoy la Usach marcha por sus cachorros!",
+      "fecha": "27 DE MAYO, 2018",
+      "texto": "Luego de tres reuniones, por los animales que serán desalojados con la construcción de una Sala Cuna, las autoridades de la universidad, han declarado de forma intransigente que no hay solución, por tanto, no hay vuelta atrás.",
+      "imagen": "../static/images/noticia2.png"
+    },
+    {
+      "id": 3,
+      "titulo": "Polémica ante posible expulsión de agrupación animalista por parte de rectoría de la Usach",
+      "fecha": "24 DE MAYO, 2018",
+      "texto": "Polémica está generando la posible erradicación de AEDA desde las dependencias de la Universidad de Santiago (USACh), luego que desde la casa de estudios confirmaran que utilizarán los terrenos que actualmente ocupa el grupo.",
+      "imagen": "../static/images/noticia3.png"
     }
   ]
 }

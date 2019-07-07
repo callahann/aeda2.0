@@ -7,8 +7,8 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading text-left">Solicitudes</div>
       <div class="list-group list-group-flush ">
-	        <a href="#" class="list-group-item list-group-item-action bg-light text-right">Adopciones</a>
-	        <a href="#" class="list-group-item list-group-item-action bg-light text-right">Voluntariado</a>
+	        <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-right">Adopciones</a>
+          <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-right">Voluntariado</a>
 	        <a href="#" class="list-group-item list-group-item-action bg-light text-right">Donaciones</a>
         <a href="#" class="sidebar-heading list-group-item list-group-item-action bg-light text-left">Mascotas</a>
       </div>
