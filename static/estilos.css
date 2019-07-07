@@ -76,14 +76,14 @@ h1{
 }
 
 .parrafoizq p{
-	color: #5f976c;
+	color:rgb(24, 137, 64) !important;
 	font-size: 20px;
 	text-align: left;
 	margin-bottom: 20px;
 }
 
 .parrafoder p{
-	color: #5f976c;
+	color:rgb(24, 137, 64) !important;
 	font-size: 20px;
 	text-align: right;
 	margin-bottom: 20px;
@@ -119,7 +119,7 @@ h1{
 }
 
 .card-text{
-	color: #5f976c;
+	color:rgb(24, 137, 64) !important;
 	font-size: 14px;
 	text-align: center;
 }
@@ -173,8 +173,9 @@ h1{
 	font-style: italic;
 }
 .carousel .overview b {
-	text-transform: uppercase;
-	color: #7AA641;
+	font-family: 'Arapey', serif !important;
+	color:rgb(40, 133, 135) !important;
+	font-size: 25px !important;
 }
 .carousel .carousel-control {
 	width: 40px;
