@@ -29,6 +29,7 @@
         	<table class="table">
 			  <thead>
 			    <tr>
+            <th scope="col">Estado</th>
 			      <th scope="col"></th>
 			      <th scope="col">Nombre</th>
             <th class="col">Descripción</th>
@@ -37,10 +38,12 @@
 			  </thead>
 			  <tbody>
 			    <tr v-for="perro in perros" style="vertical-align: middle !important;">
+            <td style="color: green;">Disponible</td>
 			      <td><img :src=perro.url class=" " alt="..." style="width: 90px;"></td>
             <td>{{perro.nombre}}</td>
 			      <td>{{perro.descripcion}}</td>
 			      <td><button class="btn btn-info"><i class="fas fa-edit"></i> Editar</button></td>
+             <td><button class="btn btn-danger"><i class="fas fa-trash-alt"></i> Borrar</button></td>
             
 			    </tr>
 			    
