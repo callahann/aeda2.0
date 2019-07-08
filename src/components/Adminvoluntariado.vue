@@ -5,15 +5,15 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading text-left">Solicitudes</div>
+      <div class="sidebar-heading text-left"><b>Solicitudes</b></div>
       <div class="list-group list-group-flush ">
-	        <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-right">Adopciones</a>
-          <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-right">Voluntariado</a>
-	        <a href="#" class="list-group-item list-group-item-action bg-light text-right">Donaciones</a>
-        <a href="#" class="sidebar-heading list-group-item list-group-item-action bg-light text-left">Mascotas</a>
+          <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-dog"></i> Adopciones</a>
+          <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-hand-holding-heart"></i> Voluntariado</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-coins"></i> Donaciones</a>
+        <a href="#/admin/mascotas" class="sidebar-heading list-group-item list-group-item-action bg-light text-left" id="mascotas"><b>Mascotas</b></a>
       </div>
     </div>
-    <!-- /#sidebar-wrapper -->
+    <!-- /#sidebar-wrapper --> 
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
@@ -57,22 +57,20 @@
   </div>
 
 </template>
-<script>
-  export default{
-    data(){
-      return{
-      }
-    }
-  }
-</script>
 <style>
-	/*!
+  /*!
  * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 body {
   overflow-x: hidden;
+}
+.card{
+  padding: 10px !important;
+}
+.card-text{
+  font-size: 18px;
 }
 
 #sidebar-wrapper {
@@ -85,9 +83,19 @@ body {
 }
 
 #sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
+  padding: 10px;
+  font-size: 14px;
 }
+.sidebar-heading{
+  margin-left: 1 px;
+  border-bottom: 1px solid #dee2e6!important;
+}
+.fas{
+  font-size: 20px;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+
 
 #sidebar-wrapper .list-group {
   width: 15rem;
@@ -116,16 +124,25 @@ body {
   }
 
   .d-flex{
-  	margin-top: -60px;
+    margin-top: -60px;
   }
 }
 
 .table{
-	background-color: white;
+  background-color: white;
+}
+#mascotas{
+  border-top: 1px solid #dee2e6 !important;
 }
 
 h1{
-	font-size: 20px;
+  font-size: 20px;
 }
-
+.list-group-item-action{
+  border: none !important;
+  font-size: 14px;
+}
+a.bg-light:hover{
+  background-color: rgb(149, 198, 175)!important;
+}
 </style>

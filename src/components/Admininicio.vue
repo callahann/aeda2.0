@@ -10,7 +10,7 @@
           <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-dog"></i> Adopciones</a>
           <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-hand-holding-heart"></i> Voluntariado</a>
           <a href="#" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-coins"></i> Donaciones</a>
-        <a href="#" class="sidebar-heading list-group-item list-group-item-action bg-light text-left" id="mascotas"><b>Mascotas</b></a>
+        <a href="#/admin/mascotas" class="sidebar-heading list-group-item list-group-item-action bg-light text-left" id="mascotas"><b>Mascotas</b></a>
       </div>
     </div>
     <!-- /#sidebar-wrapper --> 
@@ -32,21 +32,7 @@
           </div>
           </div>
 
- <!--          <div class="card col-md-6" style="height: 100px !important;">
-          <div class="card-body">
-           <div class="card-title"> <b>Actividad de la página</b></div>
-           <div class="card-text text-left"></div>
-          </div>
-          </div>
-          <div class="card col-md-6" style="height: 100px !important;">
-          <div class="card-body">
-           <div class="card-title"> <b>Actividad de la página</b></div>
-          Contador de visitas 
-<center><a  title="">
-<img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=268229"></a><br></center>
-Fin Contador de visitas
-          </div>
-          </div> -->
+
 
         </div>
         

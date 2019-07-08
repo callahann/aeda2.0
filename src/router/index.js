@@ -7,6 +7,7 @@ import Formulario from '@/components/Formulario'
 import Adminadopciones from '@/components/Adminadopciones'
 import Adminvoluntariado from '@/components/Adminvoluntariado'
 import Admininicio from '@/components/Admininicio'
+import Adminmascotas from '@/components/Adminmascotas'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/admin/voluntariado',
       name: 'Adminadopciones',
       component: Adminvoluntariado
+    },
+    {
+      path: '/admin/mascotas',
+      name: 'Adminmascotas',
+      component: Adminmascotas
     }
   ]
 })

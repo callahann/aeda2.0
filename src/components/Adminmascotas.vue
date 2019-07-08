@@ -21,26 +21,27 @@
       
 
       <div class="container-fluid" style="margin-top: 20px;">
-        <h1>Solicitudes de adopciones</h1>
+        <div class="row" style="margin-bottom: 10px;">
+          <h1 class="col-md-2">Mascotas</h1>
+          <div class="col-md-8"></div>
+        <button class="btn btn-primary pull-right col-md-2" style="color: white;"><i class="fas fa-plus"></i> Agregar mascota</button>
+        </div>
         	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Estado</th>
+			      <th scope="col"></th>
 			      <th scope="col">Nombre</th>
-			      <th scope="col">Correo</th>
-			      <th scope="col">Mascota de interés</th>
-			      <th scope="col">Ver más</th>
+            <th class="col">Descripción</th>
+			      <th scope="col"> </th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr v-for="solicitud in pendienteSolicitudes">
-			      <td v-if="solicitud.pendiente">Pendiente</td>
-            <td v-else>Contestada</td>
-			      <td>{{solicitud.nombre}} {{solicitud.apellido}}</td>
-			      <td>{{solicitud.correo}}</td>
-            <td v-if="solicitud.perro_id===0">Sin especificar</td>
-			      <td v-else>{{solicitud.perro_nombre}}</td>
-			      <td><button @click="responder(solicitud.id, solicitud.perro_id)" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
+			    <tr v-for="perro in perros" style="vertical-align: middle !important;">
+			      <td><img :src=perro.url class=" " alt="..." style="width: 90px;"></td>
+            <td>{{perro.nombre}}</td>
+			      <td>{{perro.descripcion}}</td>
+			      <td><button class="btn btn-info"><i class="fas fa-edit"></i> Editar</button></td>
+            
 			    </tr>
 			    
 			  </tbody>
@@ -67,30 +68,14 @@
   export default{
     data(){
       return{
-        solicitudes: [],
-        abierto: false,
-        id_perro: '',
-        id_solicitud: ''
+          perros: []
       }
     },
     created: function(){
-      axios.get('http://localhost:3000/solicitudes')
-        .then(response => {
-          this.solicitudes = response.data;
-          axios.get('http://localhost:3000/mascotas')
-          .then(response => {
-            this.mascotas = response.data;
-            for (var i = 0;i < this.solicitudes.length; i++) {
-              for (var j = 0;j < this.mascotas.length; j++) {
-                if (this.solicitudes[i].perro_id == this.mascotas[j].id) {
-                  this.$set(this.solicitudes[i], 'perro_nombre', this.mascotas[j].nombre);
-                  } 
-                } 
-              }
+        axios.get('http://localhost:3000/mascotas')
+            .then(response => {
+                this.perros = response.data;     
             });
-                     
-          console.log(this.solicitudes);
-        });
     },
     computed: {
      pendienteSolicitudes: function() {
@@ -218,5 +203,8 @@ h1{
 }
 a.bg-light:hover{
   background-color: rgb(149, 198, 175)!important;
+}
+.table td, .table th{
+  vertical-align: middle !important;
 }
 </style>
