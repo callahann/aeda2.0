@@ -2,7 +2,7 @@
   <div>
    <div class="row" style="margin-left: 100px; margin-right:100px;" >
 			<div class="col-md-12 text-center">
-			<img src="../assets/images/voluntarios.jpg" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
+			<img src="../assets/images/aedabanner.png" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
 		
 			
 			</div>
