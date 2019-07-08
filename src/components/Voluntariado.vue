@@ -88,6 +88,11 @@ h2::after {
 	left: 0;
 	right: 0;
 	bottom: -10px;
+},
+.testimonial{
+	font-family: 'Arapey', serif !important;
+	font-size: 30px !important;
+	color:rgb(24, 137, 64) !important;
 }
 
 </style>
