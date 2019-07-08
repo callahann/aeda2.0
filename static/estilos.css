@@ -120,7 +120,7 @@ h1{
 
 .card-text{
 	color:rgb(24, 137, 64) !important;
-	font-size: 14px;
+	font-size: 14px !important;
 	text-align: center;
 }
 
