@@ -1,5 +1,6 @@
 <template>
   <div>
+  	<Nav></Nav>
     <div class="row" style="margin-left: 100px; margin-right:100px;" >
 
 			<div class="parrafoizq col-md-6">
@@ -116,6 +117,7 @@ h2::after {
 <script>
 	import axios from 'axios';
 	import Formulario from './Formulario'
+	import Nav from '@/components/Nav.vue'
   	export default{
     	data(){
 	      return{

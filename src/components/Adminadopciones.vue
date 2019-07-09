@@ -64,6 +64,7 @@
 <script>
   import axios from 'axios'; 
   import Solicitud from './Solicitud'
+  import Nav from '@/components/Nav.vue'
   export default{
     data(){
       return{

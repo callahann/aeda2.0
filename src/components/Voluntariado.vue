@@ -1,5 +1,6 @@
 <template>
   <div>
+  		<Nav></Nav>
    <div class="row" style="margin-left: 100px; margin-right:100px;" >
 			<div class="col-md-12 text-center">
 			<img src="../assets/images/aedabanner.png" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
@@ -98,6 +99,7 @@ h2::after {
 </style>
 <script>
   import axios from 'axios';
+    import Nav from '@/components/Nav.vue'
   export default{
     data(){
       return{

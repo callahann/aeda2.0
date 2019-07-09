@@ -19,7 +19,7 @@
     <div id="page-content-wrapper">
 
       
-
+  <Nav></Nav>
       <div class="container-fluid" style="margin-top: 20px;">
         <div class="row" style="margin-bottom: 10px;">
           <h1 class="col-md-2">Mascotas</h1>
@@ -68,6 +68,7 @@
 <script>
   import axios from 'axios'; 
   import Solicitud from './Solicitud'
+  import Nav from '@/components/Nav.vue'
   export default{
     data(){
       return{

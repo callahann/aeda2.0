@@ -19,7 +19,7 @@
     <div id="page-content-wrapper">
 
       
-
+  <Nav></Nav>
       <div class="container-fluid" style="margin-top: 20px;">
         <h1>Solicitudes / Voluntariado</h1>
         	<table class="table">
@@ -57,6 +57,16 @@
   </div>
 
 </template>
+<script>
+  import Nav from '@/components/Nav.vue'
+  export default{
+    data(){
+      return{
+      }
+    }
+  }
+</script>
+
 <style>
   /*!
  * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)

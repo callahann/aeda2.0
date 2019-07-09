@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div>	
+  	<Nav></Nav>
     <div class="row" style="margin-left: 100px; margin-right:100px;" >
 			<div class="col-md-8">
 			<img src="../assets/images/campana_llegoelfrio.jpg" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
@@ -37,6 +38,8 @@
 </template>
 <script>
 	import axios from 'axios';
+	import Nav from '@/components/Nav.vue'
+
   	export default{
     	data(){
 	      return{
