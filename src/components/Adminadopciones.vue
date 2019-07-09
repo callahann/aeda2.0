@@ -50,7 +50,7 @@
            <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
                  <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
              </div>
-            <solicitud 
+            <solicitud @exit="closeModal"
             v-bind:id_solicitud=this.id_solicitud
             v-bind:id_perro=this.id_perro></solicitud>
             
@@ -108,6 +108,25 @@
           this.$modal.show('contestar');
         },
         cerrar: function(){
+          this.abierto = false;
+          this.$modal.hide('contestar');
+          axios.get('http://localhost:3000/solicitudes')
+          .then(response => {
+            this.solicitudes = response.data;
+            axios.get('http://localhost:3000/mascotas')
+            .then(response => {
+              this.mascotas = response.data;
+              for (var i = 0;i < this.solicitudes.length; i++) {
+                for (var j = 0;j < this.mascotas.length; j++) {
+                  if (this.solicitudes[i].perro_id == this.mascotas[j].id) {
+                    this.$set(this.solicitudes[i], 'perro_nombre', this.mascotas[j].nombre);
+                    } 
+                  } 
+                }
+              });
+          });
+        },
+        closeModal: function(){
           this.abierto = false;
           this.$modal.hide('contestar');
           axios.get('http://localhost:3000/solicitudes')

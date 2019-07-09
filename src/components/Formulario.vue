@@ -115,6 +115,7 @@
 				axios.post('http://localhost:3000/solicitudes', datos)
 				.then(response => {
 					console.log('se hizo');
+					this.$emit('exit', true);
 				});
 			}
 		}

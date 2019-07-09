@@ -25,32 +25,32 @@
         	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Fecha</th>
+			      <th scope="col">Estado</th>
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Correo</th>
-			      <th scope="col">Mascota de interés</th>
 			      <th scope="col">Ver más</th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <td>02/05/2019</td>
-			      <td>Mark Otto</td>
-			      <td>hola@mdo.com</td>
-			      <td>Tigrito</td>
-			      <td><button class="btn btn-success"><i class="fas fa-plus"></i></button></td>
-			    </tr>
-			    <tr>
-			      <td>02/05/2019</td>
-			      <td>Mark Otto</td>
-			      <td>hola@mdo.com</td>
-			      <td>Tigrito</td>
-			      <td><button class="btn btn-success"><i class="fas fa-plus"></i></button></td>
+			    <tr v-for="voluntariado in voluntariadosPendientes">
+			      <td>Pendiente</td>
+			      <td>{{voluntariado.nombre}} {{voluntariado.apellido}}</td>
+			      <td>{{voluntariado.correo}}</td>
+			      <td><button @click="responder(voluntariado.id)" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
 			    </tr>
 			    
 			  </tbody>
 			</table>
       </div>
+       <modal v-if="abierto" name="contestar" :clickToClose="false" height="auto" :scrollable="true">
+           <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
+                 <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
+             </div>
+            <solicitud-voluntariado @exit="closeModal" 
+            v-bind:id_voluntariado=this.id_voluntariado
+            ></solicitud-voluntariado>
+            
+        </modal>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -58,11 +58,46 @@
 
 </template>
 <script>
+  import axios from 'axios';
+  import SolicitudVoluntariado from './SolicitudVoluntariado'
   import Nav from '@/components/Nav.vue'
   export default{
     data(){
       return{
+        voluntariados: [],
+        abierto: false
       }
+    },
+    created: function(){
+      axios.get('http://localhost:3000/voluntariados')
+      .then(response=> {
+        this.voluntariados = response.data;
+      })
+    },
+    computed:{
+      voluntariadosPendientes: function() {
+       return this.voluntariados.filter(function(v) {
+         return v.pendiente
+         })
+       }
+    },
+    methods:{
+     responder: function(id_voluntariado){
+          this.id_voluntariado = id_voluntariado;
+          this.abierto = true;
+          this.$modal.show('contestar');
+        },
+        cerrar: function(){
+          this.abierto = false;
+          this.$modal.hide('contestar');
+          axios.get('http://localhost:3000/voluntariados')
+          .then(response => {
+            this.voluntariados = response.data; 
+          });
+        } 
+    },
+    components: {
+      'solicitud-voluntariado': SolicitudVoluntariado
     }
   }
 </script>

@@ -4,31 +4,36 @@
       "id": 1,
       "nombre": "Tigrito",
       "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos.",
-      "url": "https://placedog.net/400/400/500"
+      "url": "https://placedog.net/400/400/500",
+      "disponible": false
     },
     {
       "id": 2,
       "nombre": "Gamboa",
       "descripcion": "Gamboa es de tamaño pequeño/mediano y siempre ha sido un fiel compañero regalón.",
-      "url": "https://placedog.net/400/400/501"
+      "url": "https://placedog.net/400/400/501",
+      "disponible": true
     },
     {
       "id": 3,
       "nombre": "Cleto",
       "descripcion": "Este amigo de 10 años tamaño pequeño está esperando una familia que lo quiera y lo cuide, viejito mañoso y juguetón.",
-      "url": "https://placedog.net/400/400/502"
+      "url": "https://placedog.net/400/400/502",
+      "disponible": true
     },
     {
       "id": 4,
       "nombre": "Canica",
       "descripcion": "Esta amiga de tamaño mediano/pequeño tiene aproximadamente dos años. Es muy enérgica e infinitamente regalona.",
-      "url": "https://placedog.net/400/400/503"
+      "url": "https://placedog.net/400/400/503",
+      "disponible": true
     },
     {
       "id": 5,
       "nombre": "Zeus",
       "descripcion": "Este amigo de 2 años, está en busca de una familia que lo ame, no dudará en llenarte de abrazos cuando llegues a casa.",
-      "url": "https://placedog.net/400/400/504"
+      "url": "https://placedog.net/400/400/504",
+      "disponible": true
     },
     {
       "id": 6,
@@ -40,37 +45,43 @@
       "id": 7,
       "nombre": "Balti",
       "descripcion": "Esta pequeña amiga peluda es sumamente juguetona, protectora y ama los cariñitos, solo espera un lugar en tu hogar.",
-      "url": "https://placedog.net/400/400/521"
+      "url": "https://placedog.net/400/400/521",
+      "disponible": true
     },
     {
       "id": 8,
       "nombre": "Vaquita",
       "descripcion": "Ella es una cachorra de 6 meses, es tranquila y cariñosa, solo busca una familia para darle amor.",
-      "url": "https://placedog.net/400/400/507"
+      "url": "https://placedog.net/400/400/507",
+      "disponible": true
     },
     {
       "id": 9,
       "nombre": "Vainilla",
       "descripcion": "Esta cachorra de 5 meses está en busca de un hogar, es protectora y muy alegre.",
-      "url": "https://placedog.net/400/400/508"
+      "url": "https://placedog.net/400/400/508",
+      "disponible": true
     },
     {
       "id": 10,
       "nombre": "Dobby",
       "descripcion": "Esta dama de 10 años es conocida o mimada por todos quienes la conocen, se ha ganado el amor de todos.",
-      "url": "https://placedog.net/400/400/527"
+      "url": "https://placedog.net/400/400/527",
+      "disponible": true
     },
     {
       "id": 11,
       "nombre": "Toby",
       "descripcion": "¡Este peludito tiene 3 años y mucho amor para darte! Es un fiel compañero y muy regalón.",
-      "url": "https://placedog.net/400/400/510"
+      "url": "https://placedog.net/400/400/510",
+      "disponible": true
     },
     {
       "id": 12,
       "nombre": "Mía",
       "descripcion": "Es una cachorrita de 5 meses, hoy busca una familia para entregarle amor y felicidad, es muy tranquila y regalora.",
-      "url": "https://placedog.net/400/400/511"
+      "url": "https://placedog.net/400/400/511",
+      "disponible": true
     }
   ],
   "solicitudes": [
@@ -91,7 +102,7 @@
       "telefono": "1239803",
       "descripcion": "hkjlmn\nljnklk",
       "perro_id": 3,
-      "pendiente": true,
+      "pendiente": false,
       "id": 2
     },
     {
@@ -143,6 +154,66 @@
       "perro_id": 0,
       "pendiente": false,
       "id": 7
+    },
+    {
+      "nombre": "asd",
+      "apellido": "sad",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "ashdu213",
+      "descripcion": "23yepu32j41",
+      "perro_id": 4,
+      "pendiente": false,
+      "id": 8
+    },
+    {
+      "nombre": "asd",
+      "apellido": "sad",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "ashdu213",
+      "descripcion": "23yepu32j41",
+      "perro_id": 4,
+      "pendiente": true,
+      "id": 9
+    },
+    {
+      "nombre": "asd",
+      "apellido": "sad",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "ashdu213",
+      "descripcion": "23yepu32j41",
+      "perro_id": 4,
+      "pendiente": false,
+      "id": 10
+    },
+    {
+      "nombre": "asd",
+      "apellido": "sad",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "ashdu213",
+      "descripcion": "23yepu32j41",
+      "perro_id": 4,
+      "pendiente": true,
+      "id": 11
+    },
+    {
+      "nombre": "asd",
+      "apellido": "sad",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "ashdu213",
+      "descripcion": "23yepu32j41",
+      "perro_id": 4,
+      "pendiente": true,
+      "id": 12
+    },
+    {
+      "nombre": "ñlkjv",
+      "apellido": "ljkjbn",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "12398213",
+      "descripcion": "vbnmklp9iuhjklp'0ijnmlp0ijn",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 13
     }
   ],
   "noticias": [
@@ -200,6 +271,26 @@
       "id": 2,
       "nombre": "Antonia",
       "texto": " no se :)"
+    }
+  ],
+  "voluntariados": [
+    {
+      "id": 1,
+      "pendiente": true,
+      "nombre": "asdasd",
+      "apellido": "asdasd",
+      "descripcion": "asdasdasdasdasda",
+      "correo": "hola@usach.cl",
+      "telefono": "12301238"
+    },
+    {
+      "id": 2,
+      "pendiente": true,
+      "nombre": "nbbdsmandba",
+      "apellido": "nbbdsmandba",
+      "descripcion": "asdasdasdasdasda",
+      "correo": "chao@usach.cl",
+      "telefono": "12301238"
     }
   ]
 }

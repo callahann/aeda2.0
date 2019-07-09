@@ -65,6 +65,7 @@
                 	axios.put('http://localhost:3000/solicitudes/' + this.id_solicitud, solicitudActual)
 	                	.then(response => {
 	                		console.log('éxito');
+	                		this.$emit('exit', true);
 
 	                	})   
 	            });

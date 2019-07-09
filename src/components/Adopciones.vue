@@ -20,7 +20,7 @@
 
 			</div>
 			
-				<div v-for="perro in perros" class="col-md-3 text-center">
+				<div v-for="perro in perrosActivos" class="col-md-3 text-center">
 					<div @click="adoptarEspecifico(perro.id)"  class="card col-md-12" style="width: 18rem; cursor:pointer;">
 					  <img :src=perro.url class="card-img-top" alt="...">
 					  <div class="card-body">
@@ -73,7 +73,7 @@
 					 <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
 				  	 	   <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
 				  	 </div>
-				  	<formulario 
+				  	<formulario @exit="closeModal"
 				  	v-bind:tipo_adopcion=this.tipo_adopcion
 				  	v-bind:perroSeleccionado=this.perroSeleccionado></formulario>
 				  	
@@ -155,10 +155,21 @@ h2::after {
 	    	cerrar: function(){
 	    		this.abierto = false;
 	    		this.$modal.hide('adoptar');
+	    	},
+	    	closeModal: function(){	
+	    		this.abierto = false;
+	    		this.$modal.hide('adoptar')	
 	    	}
 	    },
 	    components: {
 			'formulario': Formulario
-		}
+		},
+		computed: {
+	      perrosActivos: function() {
+	       return this.perros.filter(function(p) {
+	         return p.disponible
+	         })
+	       }
+	    }
 	  }
 </script>

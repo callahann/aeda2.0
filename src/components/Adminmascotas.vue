@@ -24,7 +24,7 @@
         <div class="row" style="margin-bottom: 10px;">
           <h1 class="col-md-2">Mascotas</h1>
           <div class="col-md-8"></div>
-        <button class="btn btn-primary pull-right col-md-2" style="color: white;"><i class="fas fa-plus"></i> Agregar mascota</button>
+        <button @click="agregar" class="btn btn-primary pull-right col-md-2" style="color: white;"><i class="fas fa-plus"></i> Agregar mascota</button>
         </div>
         	<table class="table">
 			  <thead>
@@ -37,26 +37,24 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr v-for="perro in perros" style="vertical-align: middle !important;">
+			    <tr v-for="perro in perrosActivos" style="vertical-align: middle !important;">
             <td style="color: green;">Disponible</td>
 			      <td><img :src=perro.url class=" " alt="..." style="width: 90px;"></td>
             <td>{{perro.nombre}}</td>
 			      <td>{{perro.descripcion}}</td>
 			      <td><button class="btn btn-info"><i class="fas fa-edit"></i> Editar</button></td>
-             <td><button class="btn btn-danger"><i class="fas fa-trash-alt"></i> Borrar</button></td>
+             <td><button @click="quitar(perro.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Borrar</button></td>
             
 			    </tr>
 			    
 			  </tbody>
 			</table>
       </div>
-      <modal v-if="abierto" name="contestar" :clickToClose="false" height="auto" :scrollable="true">
+      <modal v-if="abierto" name="agregar" :clickToClose="false" height="auto" :scrollable="true">
            <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
                  <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
              </div>
-            <solicitud 
-            v-bind:id_solicitud=this.id_solicitud
-            v-bind:id_perro=this.id_perro></solicitud>
+            <agregar-perro></agregar-perro>
             
         </modal>
     </div>
@@ -67,12 +65,13 @@
 </template>
 <script>
   import axios from 'axios'; 
-  import Solicitud from './Solicitud'
+  import AgregarPerro from './AgregarPerro'
   import Nav from '@/components/Nav.vue'
   export default{
     data(){
       return{
-          perros: []
+          perros: [],
+          abierto: false
       }
     },
     created: function(){
@@ -89,15 +88,13 @@
        } // contains only Alex and James
      },
      methods: {
-      responder: function(id_solicitud, id_perro){
-          this.id_solicitud = id_solicitud;
-          this.id_perro = id_perro;
+      agregar: function(id_solicitud, id_perro){
           this.abierto = true;
-          this.$modal.show('contestar');
+          this.$modal.show('agregar');
         },
         cerrar: function(){
           this.abierto = false;
-          this.$modal.hide('contestar');
+          this.$modal.hide('agregar');
           axios.get('http://localhost:3000/solicitudes')
           .then(response => {
             this.solicitudes = response.data;
@@ -113,10 +110,32 @@
                 }
               });
           });
+        },
+        quitar: function(id){
+          console.log(id);
+          axios.get('http://localhost:3000/mascotas/' + id)
+          .then(response => {
+            var perro = response.data;
+            perro.disponible = false;
+            axios.put('http://localhost:3000/mascotas/' + id, perro)
+            .then(response=> {
+              axios.get('http://localhost:3000/mascotas')
+              .then(response => {
+                  this.perros = response.data;     
+              });
+            })
+          })
         }
      },
      components: {
-      'solicitud': Solicitud
+      'agregar-perro' : AgregarPerro
+    },
+    computed: {
+      perrosActivos: function() {
+       return this.perros.filter(function(p) {
+         return p.disponible
+         })
+       }
     }
   }
 </script>

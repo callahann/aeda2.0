@@ -16,7 +16,7 @@
 			</div>
 			<div class="parrafoder col-md-6">
 			    <div class="boton col-md-6 text-center">
-			    	<a href="#" class="btn btn-success" role="button"><b>¡Quiero inscribirme!</b></a>
+			    	<a @click="inscribirme" class="btn btn-success" role="button"><b>¡Quiero inscribirme!</b></a>
 			    </div>
 				<h1 class="col-md-12 text-right" style="margin-top: 150px;"><b>¿Qué hace un voluntario?</b></h1>
 				<p class="col-md-12 text-justify">
@@ -61,7 +61,13 @@
 				</a>
 			</div>
 		
-
+			<modal v-if="abierto" name="inscribirme" :clickToClose="false" :width="800" height="auto" :scrollable="true">
+					 <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
+				  	 	   <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
+				  	 </div>
+				  	<div>FORMULARIO PARA INSCRIBIRSE</div>
+				  	
+				</modal>
 
 			</div> 
 
@@ -103,7 +109,8 @@ h2::after {
   export default{
     data(){
       return{
-      	testimonios:[]
+      	testimonios:[],
+      	abierto: false
       }
     },
      created: function(){
@@ -112,5 +119,15 @@ h2::after {
                 this.testimonios = response.data;     
             });
 	    },
+	    methods:{
+	    	inscribirme: function(){
+	    		this.abierto = true;
+	    		this.$modal.show('inscribirme');
+	    	},
+	    	cerrar: function(){
+	    		this.abierto = false;
+	    		this.$modal.hide('inscribirme');
+	    	}
+	    }
   }
 </script>
