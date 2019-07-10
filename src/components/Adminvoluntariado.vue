@@ -43,7 +43,7 @@
 			</table>
       </div>
        <modal v-if="abierto" name="contestar" :clickToClose="false" height="auto" :scrollable="true">
-           <div class="panel-footer pull-right" style="padding-right: 20px !important; padding-top: 10px !important;">
+            <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
                  <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
              </div>
             <solicitud-voluntariado @exit="closeModal" 
