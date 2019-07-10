@@ -9,7 +9,7 @@
       <div class="list-group list-group-flush ">
           <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-dog"></i> Adopciones</a>
           <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-hand-holding-heart"></i> Voluntariado</a>
-          <a href="#" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-coins"></i> Donaciones</a>
+           <a class="list-group-item list-group-item-action bg-light text-left" id="disabled"><i class="fas fa-coins"></i> Donaciones</a>
         <a href="#/admin/mascotas" class="sidebar-heading list-group-item list-group-item-action bg-light text-left" id="mascotas"><b>Mascotas</b></a>
       </div>
     </div>
@@ -246,5 +246,9 @@ a.bg-light:hover{
 }
 .table td, .table th{
   vertical-align: middle !important;
+}
+#disabled:hover{
+  background-color: #F8F9FA !important;
+  cursor:default;
 }
 </style>

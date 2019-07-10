@@ -5,7 +5,7 @@
       "nombre": "Tigrito",
       "descripcion": "Es regalón, le encanta jugar, se lleva bien con niños y te seguirá a donde sea, aunque su amor es celoso con otros perritos.",
       "url": "https://placedog.net/400/400/500",
-      "disponible": false
+      "disponible": true
     },
     {
       "id": 2,
@@ -39,7 +39,8 @@
       "id": 6,
       "nombre": "Princesa",
       "descripcion": "Esta linda perrita de 2 años está buscando un hogar, es cariñosa, juguetona y alegre, !Hará de tu vida una aventura!.",
-      "url": "https://placedog.net/400/400/505"
+      "url": "https://placedog.net/400/400/505",
+      "disponible": true
     },
     {
       "id": 7,
@@ -82,270 +83,41 @@
       "descripcion": "Es una cachorrita de 5 meses, hoy busca una familia para entregarle amor y felicidad, es muy tranquila y regalora.",
       "url": "https://placedog.net/400/400/511",
       "disponible": true
-    },
-    {
-      "nombre": "HOLA",
-      "descripcion": "asdkaopdkaspodk",
-      "url": "https://placedog.net/400/400/513",
-      "disponible": false,
-      "id": 13
-    },
-    {
-      "nombre": "CHAO",
-      "descripcion": "qoiepwqeoqw",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 14
-    },
-    {
-      "nombre": "CHAO",
-      "descripcion": "qoiepwqeoqw",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 15
-    },
-    {
-      "nombre": "CHAO",
-      "descripcion": "qoiepwqeoqw",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 16
-    },
-    {
-      "nombre": "CHAO",
-      "descripcion": "qwpeoiqwpeoiq",
-      "url": "https://placedog.net/400/400/5NaN",
-      "disponible": false,
-      "id": 17
-    },
-    {
-      "nombre": "poiepowqie",
-      "descripcion": "1ljasijasdpi",
-      "url": "https://placedog.net/400/400/5NaN",
-      "disponible": false,
-      "id": 18
-    },
-    {
-      "nombre": "AAAAAAAAAA",
-      "descripcion": "qpiwrpoqwilfan",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 19
-    },
-    {
-      "nombre": "poiuytr",
-      "descripcion": "pfpoaksdp",
-      "url": "https://placedog.net/400/400/5NaN",
-      "disponible": false,
-      "id": 20
-    },
-    {
-      "nombre": "mmmmmmmmmmm",
-      "descripcion": "kkkkkkkkkkkkkkkk",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 21
-    },
-    {
-      "nombre": "aaaaaaaaaaaaaaa",
-      "descripcion": "aaaaaaaaaaaaaaa",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 22
-    },
-    {
-      "nombre": "lkjhg",
-      "descripcion": "kjh",
-      "url": "https://placedog.net/400/400/514",
-      "disponible": false,
-      "id": 23
-    },
-    {
-      "nombre": "bm,b",
-      "descripcion": "llkjasdda",
-      "url": "https://placedog.net/400/400/515",
-      "disponible": false,
-      "id": 24
-    },
-    {
-      "nombre": "bm,b",
-      "descripcion": "llkjasdda",
-      "url": "https://placedog.net/400/400/515",
-      "disponible": false,
-      "id": 25
     }
+    
   ],
   "solicitudes": [
     {
       "id": 1,
       "perro_id": 1,
-      "pendiente": false,
-      "nombre": "asdasd",
-      "apellido": "asdasd",
-      "descripcion": "asdasdasdasdasda",
-      "correo": "hola@usach.cl",
-      "telefono": "12301238"
+      "pendiente": true,
+      "nombre": "Javier",
+      "apellido": "Fuenzalida",
+      "descripcion": "Quiero adoptar porque soy animalista y prefiero la adopción antes de fomentar la compra y venta de animales.",
+      "correo": "j.fuenzalida@mail.com",
+      "telefono": "93873645"
     },
     {
-      "nombre": "gdlfkjgdf",
-      "apellido": "kfjlkgfl",
-      "correo": "nicolas.callahan@usach.cl",
-      "telefono": "1239803",
-      "descripcion": "hkjlmn\nljnklk",
+      "id": 2,
       "perro_id": 3,
-      "pendiente": false,
-      "id": 2
+      "pendiente": true,
+      "nombre": "Elisa",
+      "apellido": "Carreño",
+      "descripcion": "Quiero adoptar porque conozco la historia de este perrito y siempre lo veo por la universidad.",
+      "correo": "elisa.carreno@usach.cl",
+      "telefono": "93873645"
     },
     {
-      "nombre": "aaaaaaaa",
-      "apellido": "aaaaaaaa",
-      "correo": "aaaaaaaa@usach.cl",
+      "id": 3,
+      "perro_id": 0,
+      "nombre": "Carmen",
+      "apellido": "Soto",
+      "correo": "carmen.s@mail.com",
       "telefono": "87654321",
-      "descripcion": "Me gusta el perro.",
-      "perro_id": 4,
-      "pendiente": false,
-      "id": 3
-    },
-    {
-      "nombre": "bbbb",
-      "apellido": "bbbbb",
-      "correo": "bbb@usach.cl",
-      "telefono": "645784329",
-      "descripcion": "oaksdoiajsdpaosdk",
-      "perro_id": 0,
-      "pendiente": false,
-      "id": 4
-    },
-    {
-      "nombre": "poiugfghj",
-      "apellido": "oihopojh",
-      "correo": "pojhbnllokjn@usach.cl",
-      "telefono": "10923019231",
-      "descripcion": "CONCHETUMARE",
-      "perro_id": 3,
-      "pendiente": false,
-      "id": 5
-    },
-    {
-      "nombre": "Bárbara",
-      "apellido": "Peña",
-      "correo": "barbara.pena.alarcon@gmail.com",
-      "telefono": "0976136226",
-      "descripcion": "ff",
-      "perro_id": 0,
-      "pendiente": false,
-      "id": 6
-    },
-    {
-      "nombre": "ssss",
-      "apellido": "ffff",
-      "correo": "effwfwf@dddd.com",
-      "telefono": "242424234",
-      "descripcion": "2424",
-      "perro_id": 0,
-      "pendiente": false,
-      "id": 7
-    },
-    {
-      "nombre": "asd",
-      "apellido": "sad",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "ashdu213",
-      "descripcion": "23yepu32j41",
-      "perro_id": 4,
-      "pendiente": false,
-      "id": 8
-    },
-    {
-      "nombre": "asd",
-      "apellido": "sad",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "ashdu213",
-      "descripcion": "23yepu32j41",
-      "perro_id": 4,
-      "pendiente": false,
-      "id": 9
-    },
-    {
-      "nombre": "asd",
-      "apellido": "sad",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "ashdu213",
-      "descripcion": "23yepu32j41",
-      "perro_id": 4,
-      "pendiente": false,
-      "id": 10
-    },
-    {
-      "nombre": "asd",
-      "apellido": "sad",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "ashdu213",
-      "descripcion": "23yepu32j41",
-      "perro_id": 4,
-      "pendiente": false,
-      "id": 11
-    },
-    {
-      "nombre": "asd",
-      "apellido": "sad",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "ashdu213",
-      "descripcion": "23yepu32j41",
-      "perro_id": 4,
-      "pendiente": true,
-      "id": 12
-    },
-    {
-      "nombre": "ñlkjv",
-      "apellido": "ljkjbn",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "12398213",
-      "descripcion": "vbnmklp9iuhjklp'0ijnmlp0ijn",
-      "perro_id": 0,
-      "pendiente": false,
-      "id": 13
-    },
-    {
-      "nombre": "kjvjk",
-      "apellido": "lkjnjklkjn",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "3123189",
-      "descripcion": "FAJDOASJDAMLS",
-      "perro_id": 0,
-      "pendiente": true,
-      "id": 14
-    },
-    {
-      "nombre": "asdasdaksdj",
-      "apellido": "asdkpoaskdoaps",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "32871391",
-      "descripcion": "hola",
-      "perro_id": 0,
-      "pendiente": true,
-      "id": 15
-    },
-    {
-      "nombre": "douiqwpoewqe",
-      "apellido": "piewpqoiepqowie",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "23019831",
-      "descripcion": "llllllllllllllllllllllllllll",
-      "perro_id": 0,
-      "pendiente": true,
-      "id": 16
-    },
-    {
-      "nombre": "wqepqwieo",
-      "apellido": "pqowiepoqwei",
-      "correo": "aaaaaaaa@usach.cl",
-      "telefono": "321093812",
-      "descripcion": "pppppppppppppppppppppppppppp",
-      "perro_id": 0,
-      "pendiente": true,
-      "id": 17
+      "descripcion": "Me gustan los perros y estoy dispuesta a adoptar cualquiera.",
+      "pendiente": true
     }
+   
   ],
   "noticias": [
     {
@@ -396,38 +168,38 @@
     {
       "id": 1,
       "nombre": "José",
-      "texto": " no se :)"
+      "texto": "Desde que entré a la USACH soy miembro de AEDA y siento que de esa forma estoy contribuyendo con darle una mejor calidad de vida a los animales que refugiamos."
     },
     {
       "id": 2,
       "nombre": "Antonia",
-      "texto": " no se :)"
+      "texto": "Me siento muy orgullosa de pertenecer a esta hermosa agrupación que vela por los derechos de los que no tienen voz."
     }
   ],
   "voluntariados": [
     {
       "id": 1,
       "pendiente": true,
-      "nombre": "asdasd",
-      "apellido": "asdasd",
-      "descripcion": "asdasdasdasdasda",
-      "correo": "hola@usach.cl",
-      "telefono": "12301238"
+      "nombre": "Carlos",
+      "apellido": "Pereira",
+      "descripcion": "Me gustaría poder colaborar con ustedes porque me encantan los perritos, me gustaría poder hacer trabajo voluntario.",
+      "correo": "carlos.pereira.d@usach.cl",
+      "telefono": "927384751"
     },
     {
       "id": 2,
       "pendiente": true,
-      "nombre": "nbbdsmandba",
-      "apellido": "nbbdsmandba",
-      "descripcion": "asdasdasdasdasda",
-      "correo": "chao@usach.cl",
-      "telefono": "12301238"
+      "nombre": "Sofia",
+      "apellido": "Fuentes",
+      "descripcion": "Me gustaría pertenecer a la agrupación porque me gustan mucho los animales y tengo muchas ideas nuevas para poder ayudar y mejorar la vida de los perritos.",
+      "correo": "sofia.fuentes@usach.cl",
+      "telefono": "918227364"
     }
   ],
   "contador": [
     {
       "id": 0,
-      "numero": 15
+      "numero": 16
     }
   ]
 }
