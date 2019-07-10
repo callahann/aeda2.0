@@ -65,7 +65,43 @@
 					 <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
 				  	 	   <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
 				  	 </div>
-				  	<div>FORMULARIO PARA INSCRIBIRSE</div>
+				  
+				  	<div class="container row" style="padding: 20px !important;">
+		
+				  	<div class="col-md-12">
+				  		<h1 style="font-size: 20px;"><b>Formulario de inscripción</b></h1>
+				  		<form>
+						  <div class="form-group">
+						    <label for="nombre">Nombre</label>
+						    <input type="name" class="form-control" id="nombre" aria-describedby="name" placeholder="Ingrese su nombre" v-model="nombre">
+						    
+						  </div>
+						  <div class="form-group">
+						    <label for="apellido">Apellido</label>
+						    <input type="name" class="form-control" id="apellido" aria-describedby="apellido" placeholder="Ingrese su apellido" v-model="apellido">
+						  </div>
+						  <div class="form-group">
+						    <label for="email">Email</label>
+						    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Ingrese email" v-model="correo">
+						    
+						  </div>
+						  <div class="form-group">
+						    <label for="tel">Teléfono</label>
+						    <input type="tel" class="form-control" id="tel" aria-describedby="tel" placeholder="Ingrese su teléfono" v-model="telefono">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleFormControlTextarea1">Cuéntanos por qué quieres ser parte de AEDA</label>
+						    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="descripcion"></textarea>
+						  </div>
+						  
+						
+						  <button type="submit" @click="adoptar" class="btn btn-primary">Enviar</button>
+						</form>
+				  	</div>
+
+
+	
+	</div>
 				  	
 				</modal>
 
