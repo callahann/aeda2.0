@@ -82,6 +82,97 @@
       "descripcion": "Es una cachorrita de 5 meses, hoy busca una familia para entregarle amor y felicidad, es muy tranquila y regalora.",
       "url": "https://placedog.net/400/400/511",
       "disponible": true
+    },
+    {
+      "nombre": "HOLA",
+      "descripcion": "asdkaopdkaspodk",
+      "url": "https://placedog.net/400/400/513",
+      "disponible": false,
+      "id": 13
+    },
+    {
+      "nombre": "CHAO",
+      "descripcion": "qoiepwqeoqw",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 14
+    },
+    {
+      "nombre": "CHAO",
+      "descripcion": "qoiepwqeoqw",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 15
+    },
+    {
+      "nombre": "CHAO",
+      "descripcion": "qoiepwqeoqw",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 16
+    },
+    {
+      "nombre": "CHAO",
+      "descripcion": "qwpeoiqwpeoiq",
+      "url": "https://placedog.net/400/400/5NaN",
+      "disponible": false,
+      "id": 17
+    },
+    {
+      "nombre": "poiepowqie",
+      "descripcion": "1ljasijasdpi",
+      "url": "https://placedog.net/400/400/5NaN",
+      "disponible": false,
+      "id": 18
+    },
+    {
+      "nombre": "AAAAAAAAAA",
+      "descripcion": "qpiwrpoqwilfan",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 19
+    },
+    {
+      "nombre": "poiuytr",
+      "descripcion": "pfpoaksdp",
+      "url": "https://placedog.net/400/400/5NaN",
+      "disponible": false,
+      "id": 20
+    },
+    {
+      "nombre": "mmmmmmmmmmm",
+      "descripcion": "kkkkkkkkkkkkkkkk",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 21
+    },
+    {
+      "nombre": "aaaaaaaaaaaaaaa",
+      "descripcion": "aaaaaaaaaaaaaaa",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 22
+    },
+    {
+      "nombre": "lkjhg",
+      "descripcion": "kjh",
+      "url": "https://placedog.net/400/400/514",
+      "disponible": false,
+      "id": 23
+    },
+    {
+      "nombre": "bm,b",
+      "descripcion": "llkjasdda",
+      "url": "https://placedog.net/400/400/515",
+      "disponible": false,
+      "id": 24
+    },
+    {
+      "nombre": "bm,b",
+      "descripcion": "llkjasdda",
+      "url": "https://placedog.net/400/400/515",
+      "disponible": false,
+      "id": 25
     }
   ],
   "solicitudes": [
@@ -172,7 +263,7 @@
       "telefono": "ashdu213",
       "descripcion": "23yepu32j41",
       "perro_id": 4,
-      "pendiente": true,
+      "pendiente": false,
       "id": 9
     },
     {
@@ -192,7 +283,7 @@
       "telefono": "ashdu213",
       "descripcion": "23yepu32j41",
       "perro_id": 4,
-      "pendiente": true,
+      "pendiente": false,
       "id": 11
     },
     {
@@ -214,6 +305,46 @@
       "perro_id": 0,
       "pendiente": false,
       "id": 13
+    },
+    {
+      "nombre": "kjvjk",
+      "apellido": "lkjnjklkjn",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "3123189",
+      "descripcion": "FAJDOASJDAMLS",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 14
+    },
+    {
+      "nombre": "asdasdaksdj",
+      "apellido": "asdkpoaskdoaps",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "32871391",
+      "descripcion": "hola",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 15
+    },
+    {
+      "nombre": "douiqwpoewqe",
+      "apellido": "piewpqoiepqowie",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "23019831",
+      "descripcion": "llllllllllllllllllllllllllll",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 16
+    },
+    {
+      "nombre": "wqepqwieo",
+      "apellido": "pqowiepoqwei",
+      "correo": "aaaaaaaa@usach.cl",
+      "telefono": "321093812",
+      "descripcion": "pppppppppppppppppppppppppppp",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 17
     }
   ],
   "noticias": [
@@ -291,6 +422,12 @@
       "descripcion": "asdasdasdasdasda",
       "correo": "chao@usach.cl",
       "telefono": "12301238"
+    }
+  ],
+  "contador": [
+    {
+      "id": 0,
+      "numero": 15
     }
   ]
 }

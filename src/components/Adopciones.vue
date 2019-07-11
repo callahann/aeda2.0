@@ -12,7 +12,7 @@
 
 			<div class="parrafoder col-md-6">
 			    <div class="boton col-md-6 text-center">
-			    	<a href="#" @click="adoptarGeneral" class="btn btn-success" role="button"><b>¡Quiero adoptar!</b></a>
+			    	<a @click="adoptarGeneral" class="btn btn-success" role="button"><b>¡Quiero adoptar!</b></a>
 			    </div>
 				
 				
@@ -63,8 +63,8 @@
 					<i class="fa fa-angle-right"></i>
 				</a>
 			</div>
-		
-
+			
+    		<notifications group="ingresado" />
 
 			</div> 
 
@@ -158,7 +158,12 @@ h2::after {
 	    	},
 	    	closeModal: function(){	
 	    		this.abierto = false;
-	    		this.$modal.hide('adoptar')	
+	    		this.$modal.hide('adoptar');
+	    		this.$notify({
+		            group: 'ingresado',
+		            title: '¡Solicitud enviada!',
+		            text: 'Tu solicitud ha sido enviada con éxito.'
+		          });
 	    	}
 	    },
 	    components: {

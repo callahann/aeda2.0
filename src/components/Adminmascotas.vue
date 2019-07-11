@@ -54,12 +54,12 @@
            <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
                  <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
              </div>
-            <agregar-perro></agregar-perro>
+            <agregar-perro @exit="closeModal"></agregar-perro>
             
         </modal>
     </div>
     <!-- /#page-content-wrapper -->
-
+    <notifications group="ingresado" />
   </div>
 
 </template>
@@ -112,7 +112,11 @@
           });
         },
         quitar: function(id){
-          console.log(id);
+          var c = confirm("¿Estás seguro de quitar este perrito? Este cambio es permanente.");
+                if (c == false){
+                    console.log('FALSE');
+                    return;     
+                }
           axios.get('http://localhost:3000/mascotas/' + id)
           .then(response => {
             var perro = response.data;
@@ -125,6 +129,19 @@
               });
             })
           })
+        },
+        closeModal: function(){ 
+          this.abierto = false;
+          this.$modal.hide('agregar');
+          axios.get('http://localhost:3000/mascotas')
+          .then(response => {
+              this.perros = response.data;     
+          });
+          this.$notify({
+                group: 'ingresado',
+                title: '¡Mascota agregada!',
+                text: 'La mascota ha sido agregada con éxito.'
+              });
         }
      },
      components: {

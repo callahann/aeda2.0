@@ -57,7 +57,7 @@
         </modal>
     </div>
     <!-- /#page-content-wrapper -->
-
+    <notifications group="ingresado" />
   </div>
 
 </template>
@@ -143,6 +143,11 @@
                   } 
                 }
               });
+          });
+          this.$notify({
+            group: 'ingresado',
+            title: '¡Solicitud respondida!',
+            text: 'Tu solicitud ha sido respondida con éxito.'
           });
         }
      },

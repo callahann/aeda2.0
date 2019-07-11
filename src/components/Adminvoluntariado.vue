@@ -53,7 +53,7 @@
         </modal>
     </div>
     <!-- /#page-content-wrapper -->
-
+    <notifications group="ingresado" />
   </div>
 
 </template>
@@ -93,6 +93,19 @@
           axios.get('http://localhost:3000/voluntariados')
           .then(response => {
             this.voluntariados = response.data; 
+          });
+        },
+        closeModal: function(){
+          this.abierto = false;
+          this.$modal.hide('contestar');
+          axios.get('http://localhost:3000/voluntariados')
+          .then(response => {
+            this.voluntariados = response.data;
+          });
+          this.$notify({
+            group: 'ingresado',
+            title: '¡Solicitud respondida!',
+            text: 'Tu solicitud ha sido respondida con éxito.'
           });
         } 
     },

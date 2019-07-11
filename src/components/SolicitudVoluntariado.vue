@@ -6,25 +6,25 @@
 				  		<form>
 						  <div class="form-group">
 						    <label for="nombre">Nombre:</label>
-						    <p>aqui va el nombre desde la bd</p>
+						    <p>{{solicitud.nombre}} {{solicitud.apellido}}</p>
 						    
 						  </div>
 						  <div class="form-group">
 						    <label for="apellido">Correo:</label>
-						 <p>aqui va el correo desde la bd</p>
+						 <p>{{solicitud.correo}}</p>
 						  </div>
 						  <div class="form-group">
 						    <label for="email">Teléfono</label>
-						 <p>aqui va el telefono desde la bd</p>
+						 <p>{{solicitud.telefono}}</p>
 						    
 						  </div>
 						  
 						  <div class="form-group">
 						    <label for="exampleFormControlTextarea1">Comentario:</label>
-						     <p>aqui va el comentario desde la bd</p>
+						     <p>{{solicitud.descripcion}}</p>
 						  </div>
 						  
-						  <button @click="responder(solicitud.id)" class="btn btn-success pull-right">Marcar como respondida</button>
+						  <button @click="responder()" class="btn btn-success pull-right">Marcar como respondida</button>
 						 
 						</form>
 				  	</div> 
@@ -32,7 +32,35 @@
 	</div>
 </template>
 <script>
+  	import axios from 'axios';
 	export default{
-		props:['id_voluntariado']
+		data(){
+			return{
+				solicitud: {}
+			}
+		},
+		props:['id_voluntariado'],
+		created: function(){
+			axios.get('http://localhost:3000/voluntariados/'+ this.id_voluntariado)
+            .then(response => {
+                this.solicitud = response.data;
+                console.log(this.solicitud);   
+            });
+		},
+		methods: {
+			responder: function(){
+				axios.get('http://localhost:3000/voluntariados/'+ this.id_voluntariado)
+	            .then(response => {
+	                var solicitudActual = response.data;
+	                solicitudActual.pendiente = false;
+                	axios.put('http://localhost:3000/voluntariados/' + this.id_voluntariado, solicitudActual)
+	                	.then(response => {
+	                		console.log('éxito');
+	                		this.$emit('exit', true);
+
+	                	})   
+	            });
+			}
+		}
 	}
 </script>	
