@@ -2,50 +2,56 @@
  
 
 	<div class="d-flex" id="wrapper">
+   
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+         <Nav v-bind:activo="0" ></Nav>
+                   <!-- Sidebar -->
+    <div class="row">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+
+      <div class="bg-light border-right" id="sidebar-wrapper" style="margin-left:20px;">
       <div class="sidebar-heading text-left"><b>Solicitudes</b></div>
       <div class="list-group list-group-flush ">
           <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-dog"></i> Adopciones</a>
           <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-hand-holding-heart"></i> Voluntariado</a>
-           <a class="list-group-item list-group-item-action bg-light text-left" id="disabled"><i class="fas fa-coins"></i> Donaciones</a>
+          <a class="list-group-item list-group-item-action bg-light text-left" id="disabled"><i class="fas fa-coins"></i> Donaciones</a>
         <a href="#/admin/mascotas" class="sidebar-heading list-group-item list-group-item-action bg-light text-left" id="mascotas"><b>Mascotas</b></a>
       </div>
     </div>
-    <!-- /#sidebar-wrapper --> 
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
+    <div class="col-md-10">
+      <div class="container-fluid" style="margin-top: 20px;">
+        <h1>Solicitudes de adopciones</h1>
+          <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Estado</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Mascota de interés</th>
+            <th scope="col">Ver más</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="solicitud in pendienteSolicitudes">
+            <td v-if="solicitud.pendiente">Pendiente</td>
+            <td v-else>Contestada</td>
+            <td>{{solicitud.nombre}} {{solicitud.apellido}}</td>
+            <td>{{solicitud.correo}}</td>
+            <td v-if="solicitud.perro_id===0">Sin especificar</td>
+            <td v-else>{{solicitud.perro_nombre}}</td>
+            <td><button @click="responder(solicitud.id, solicitud.perro_id)" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      </div>
+    </div>
 
       
 
-      <div class="container-fluid" style="margin-top: 20px;">
-        <h1>Solicitudes de adopciones</h1>
-        	<table class="table">
-			  <thead>
-			    <tr>
-			      <th scope="col">Estado</th>
-			      <th scope="col">Nombre</th>
-			      <th scope="col">Correo</th>
-			      <th scope="col">Mascota de interés</th>
-			      <th scope="col">Ver más</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr v-for="solicitud in pendienteSolicitudes">
-			      <td v-if="solicitud.pendiente">Pendiente</td>
-            <td v-else>Contestada</td>
-			      <td>{{solicitud.nombre}} {{solicitud.apellido}}</td>
-			      <td>{{solicitud.correo}}</td>
-            <td v-if="solicitud.perro_id===0">Sin especificar</td>
-			      <td v-else>{{solicitud.perro_nombre}}</td>
-			      <td><button @click="responder(solicitud.id, solicitud.perro_id)" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
-			    </tr>
-			    
-			  </tbody>
-			</table>
-      </div>
+      
       <modal v-if="abierto" name="contestar" :clickToClose="false" height="auto" :scrollable="true">
             <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
                  <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
@@ -55,9 +61,11 @@
             v-bind:id_perro=this.id_perro></solicitud>
             
         </modal>
+
     </div>
     <!-- /#page-content-wrapper -->
     <notifications group="ingresado" />
+  </div>
   </div>
 
 </template>
@@ -152,7 +160,8 @@
         }
      },
      components: {
-      'solicitud': Solicitud
+      'solicitud': Solicitud,
+      'Nav': Nav
     }
   }
 </script>

@@ -3,8 +3,17 @@
 
   <div class="d-flex" id="wrapper">
 
-   <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+
+
+
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <Nav v-bind:activo="0" ></Nav>
+                   <!-- Sidebar -->
+    <div class="row">
+      <div class="bg-light border-right" id="sidebar-wrapper" style="margin-left: 20px;">
       <div class="sidebar-heading text-left"><b>Solicitudes</b></div>
       <div class="list-group list-group-flush ">
           <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-dog"></i> Adopciones</a>
@@ -17,13 +26,8 @@
 
 
 
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      
-
       <div class="container" style="margin-top: 20px;">
+
         <div class="row">
           <div class="card col-md-12" style="height: 100px !important;">
           <div class="card-body">
@@ -39,6 +43,7 @@
          
       </div>
     </div>
+    </div>
     <!-- /#page-content-wrapper -->
 
   </div>
@@ -50,6 +55,9 @@
     data(){
       return{
       }
+    },
+     components: {
+      'Nav': Nav
     }
   }
 </script>

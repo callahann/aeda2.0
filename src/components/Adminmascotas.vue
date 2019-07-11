@@ -2,24 +2,25 @@
  
 
 	<div class="d-flex" id="wrapper">
+   
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+         <Nav v-bind:activo="0" ></Nav>
+                   <!-- Sidebar -->
+    <div class="row">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+
+      <div class="bg-light border-right" id="sidebar-wrapper" style="margin-left:20px;">
       <div class="sidebar-heading text-left"><b>Solicitudes</b></div>
       <div class="list-group list-group-flush ">
           <a href="#/admin/adopciones" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-dog"></i> Adopciones</a>
           <a href="#/admin/voluntariado" class="list-group-item list-group-item-action bg-light text-left"><i class="fas fa-hand-holding-heart"></i> Voluntariado</a>
-           <a class="list-group-item list-group-item-action bg-light text-left" id="disabled"><i class="fas fa-coins"></i> Donaciones</a>
+          <a class="list-group-item list-group-item-action bg-light text-left" id="disabled"><i class="fas fa-coins"></i> Donaciones</a>
         <a href="#/admin/mascotas" class="sidebar-heading list-group-item list-group-item-action bg-light text-left" id="mascotas"><b>Mascotas</b></a>
       </div>
     </div>
-    <!-- /#sidebar-wrapper --> 
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      
-  <Nav></Nav>
+    <div class="col-md-10">
       <div class="container-fluid" style="margin-top: 20px;">
         <div class="row" style="margin-bottom: 10px;">
           <h1 class="col-md-2">Mascotas</h1>
@@ -50,6 +51,7 @@
 			  </tbody>
 			</table>
       </div>
+       </div>
       <modal v-if="abierto" name="agregar" :clickToClose="false" height="auto" :scrollable="true">
            <div class="panel-footer pull-right text-right" style="padding-right: 20px !important; padding-top: 10px !important;">
                  <button v-on:click="cerrar" type="button" class="btn btn-link"><i class="fas fa-times"></i></button>
@@ -58,6 +60,7 @@
             
         </modal>
     </div>
+     </div>
     <!-- /#page-content-wrapper -->
     <notifications group="ingresado" />
   </div>
@@ -145,7 +148,8 @@
         }
      },
      components: {
-      'agregar-perro' : AgregarPerro
+      'agregar-perro' : AgregarPerro,
+      'Nav': Nav
     },
     computed: {
       perrosActivos: function() {
