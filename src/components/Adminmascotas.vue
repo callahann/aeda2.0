@@ -180,7 +180,11 @@ body {
 .card-text{
   font-size: 18px;
 }
+.vue-notification {
+  background: green;
+  border-left: 5px solid darkgreen;
 
+  }
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;

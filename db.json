@@ -97,6 +97,20 @@
       "url": "https://placedog.net/400/400/518",
       "disponible": false,
       "id": 14
+    },
+    {
+      "nombre": "adsdw",
+      "descripcion": "wadwad",
+      "url": "https://placedog.net/400/400/519",
+      "disponible": false,
+      "id": 15
+    },
+    {
+      "nombre": "wadad",
+      "descripcion": "awdwad",
+      "url": "https://placedog.net/400/400/520",
+      "disponible": false,
+      "id": 16
     }
   ],
   "solicitudes": [
@@ -240,7 +254,7 @@
   "contador": [
     {
       "id": 0,
-      "numero": 18
+      "numero": 20
     }
   ]
 }
