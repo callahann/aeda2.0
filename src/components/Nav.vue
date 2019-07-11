@@ -9,18 +9,47 @@
 		<div class="collapse navbar-collapse row" id="navbarNav">
 			 <div class="col-md-7"></div>
 			<ul class="navbar-nav col-md-5" >
-			  <li class="nav-item active">
-			    <a class="nav-link" href="#/">Inicio<span class="sr-only">(current)</span></a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#/adopciones">Adopciones</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Donaciones</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#/voluntariado">Voluntariado</a>
-			  </li>
+			  
+			  <div v-if="activo==1">
+				  <li class="nav-item active">
+				    <a class="nav-link" href="#/">Inicio</a>
+				  </li>
+			  </div>
+			  <div v-else>
+				  	<li class="nav-item ">
+				    <a class="nav-link" href="#/">Inicio</a>
+				 	</li>
+			  </div>
+			  <div v-if="activo==2">
+				  <li class="nav-item active">
+				    <a class="nav-link" href="#/adopciones">Adopciones</a>
+				  </li>
+			  </div>
+			  <div v-else>
+				  	<li class="nav-item ">
+				    <a class="nav-link" href="#/adopciones">Adopciones</a>
+				 	</li>
+			  </div>
+			  <div v-if="activo==3">
+				  <li class="nav-item active">
+				    <a class="nav-link" href="#">Donaciones</a>
+				  </li>
+			  </div>
+			  <div v-else>
+				  	<li class="nav-item ">
+				    <a class="nav-link" href="#">Donaciones</a>
+				 	</li>
+			  </div>
+			  <div v-if="activo==4">
+				  <li class="nav-item active">
+				    <a class="nav-link" href="#/voluntariado">Voluntariado</a>
+				  </li>
+			  </div>
+			  <div v-else>
+				  	<li class="nav-item ">
+				    <a class="nav-link" href="#/voluntariado">Voluntariado</a>
+				 	</li>
+			  </div>
 			  <li class="nav-item">
 			    <a class="nav-link" href="#">¿Quiénes somos?</a>
 			  </li>
@@ -36,10 +65,15 @@
 </template>
 <script>
 	import axios from 'axios';
+	
   	export default{
-    	data(){
-	     
-	      }
-	    }
+  		props:['activo'],
 
+    	data: function () {
+  return {
+   
+  }
+}
+
+}
 </script>

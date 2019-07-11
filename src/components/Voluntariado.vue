@@ -1,6 +1,6 @@
 <template>
   <div>
-  		<Nav></Nav>
+  	<Nav v-bind:activo="4" style="margin-top: -61px;"></Nav>
    <div class="row" style="margin-left: 100px; margin-right:100px;" >
 			<div class="col-md-12 text-center">
 			<img src="../assets/images/aedabanner.png" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
@@ -40,12 +40,12 @@
 				<!-- Wrapper for carousel items -->
 				<div class="carousel-inner">
 					<div class="item carousel-item active">
-						<div><i class="fas fa-quote-left" style="font-size: 40px;"></i></div>
+						<div><i class="fas fa-quote-left" style="font-size: 40px; color:rgb(40, 133, 135) !important;"></i></div>
 						<p class="testimonial text-center">{{testimonios[0].texto}}</p>
 						<p class="overview"><b>{{testimonios[0].nombre}}</b></p>
 					</div>
 					<div v-for="testimonio in testimonios.slice(1, 4)" class="item carousel-item ">
-						<div><i class="fas fa-quote-left" style="font-size: 40px;"></i></div>
+						<div><i class="fas fa-quote-left" style="font-size: 40px; color:rgb(40, 133, 135) !important;"></i></div>
 						<p class="testimonial text-center">{{testimonio.texto}}</p>
 						<p class="overview"><b>{{testimonio.nombre}}</b></p>
 					</div>
@@ -164,6 +164,9 @@ h2::after {
 	    		this.abierto = false;
 	    		this.$modal.hide('inscribirme');
 	    	}
-	    }
+	    },
+	     components: {
+			'Nav': Nav
+		},
   }
 </script>

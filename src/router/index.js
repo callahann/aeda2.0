@@ -45,7 +45,7 @@ export default new Router({
     },
     {
       path: '/admin/voluntariado',
-      name: 'Adminadopciones',
+      name: 'Adminvoluntariado',
       component: Adminvoluntariado
     },
     {

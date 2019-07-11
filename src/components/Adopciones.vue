@@ -1,6 +1,6 @@
 <template>
   <div>
-  	<Nav></Nav>
+  	<Nav v-bind:activo="2" style="margin-top: -61px;"></Nav>
     <div class="row" style="margin-left: 100px; margin-right:100px;" >
 
 			<div class="parrafoizq col-md-6">
@@ -167,7 +167,8 @@ h2::after {
 	    	}
 	    },
 	    components: {
-			'formulario': Formulario
+			'formulario': Formulario,
+			'Nav': Nav
 		},
 		computed: {
 	      perrosActivos: function() {
