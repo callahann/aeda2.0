@@ -1,7 +1,7 @@
 <template>
   <div>
   	<Nav v-bind:activo="4" style="margin-top: -61px;"></Nav>
-   <div class="row" style="margin-left: 100px; margin-right:100px;" >
+   <div class="row" style="margin-left: 100px; margin-right:100px; margin-top: 30px;" >
 			<div class="col-md-12 text-center">
 			<img src="../assets/images/aedabanner.png" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
 		
@@ -28,7 +28,7 @@
 
 			</div>
 			<div class="parrafoder col-md-12">
-			<h1 class="col-md-6 text-left"><b>Testimonios</b></h1>
+			<h1 class="col-md-6 text-left" style="margin-top: 20px;"><b>Testimonios</b></h1>
 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<!-- Carousel indicators -->
@@ -112,6 +112,12 @@
   </div>
 </template>
 <style type="text/css">
+h1{
+	font-size: 28px;
+}
+p{
+	font-size: 19px !important;
+}
 h2 {
 	color: #333;
 	text-align: center;
@@ -131,7 +137,7 @@ h2::after {
 	left: 0;
 	right: 0;
 	bottom: -10px;
-},
+}
 .testimonial{
 	font-family: 'Arapey', serif !important;
 	font-size: 30px !important;

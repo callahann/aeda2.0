@@ -1,7 +1,7 @@
 <template>
   <div>
   	<Nav v-bind:activo="2" style="margin-top: -61px;"></Nav>
-    <div class="row" style="margin-left: 100px; margin-right:100px;" >
+    <div class="row" style="margin-left: 100px; margin-right:100px; margin-top: 30px;" >
 
 			<div class="parrafoizq col-md-6">
 				<h1 class="col-md-12"><b>¿Cómo adoptar?</b></h1>
@@ -31,7 +31,7 @@
 				   </div>
 				</div>
 				<div class="parrafoder col-md-12">
-			<h1 class="col-md-6 text-left"><b>Testimonios</b></h1>
+			<h1 class="col-md-6 text-left" style="margin-top: 20px;"><b>Testimonios</b></h1>
 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<!-- Carousel indicators -->
@@ -83,6 +83,12 @@
   </div>
 </template>
 <style type="text/css">
+h1{
+	font-size: 28px;
+}
+p{
+	font-size: 19px !important;
+}
 
 h2 {
 	color: #333;

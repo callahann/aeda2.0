@@ -1,7 +1,7 @@
 <template>
   <div>	
   	 <Nav v-bind:activo="1" style="margin-top: -61px;"></Nav>
-    <div class="row" style="margin-left: 100px; margin-right:100px;" >
+    <div class="row" style="margin-left: 100px; margin-right:100px; margin-top: 30px;" >
 			<div class="col-md-8">
 			<img src="../assets/images/campana_llegoelfrio.jpg" alt="Campaña llegó el frío" style="width:100%; margin-top: 20px; margin-bottom: 50px;">
 
