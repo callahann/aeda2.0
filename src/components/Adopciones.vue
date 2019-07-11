@@ -14,6 +14,9 @@
 			    <div class="boton col-md-6 text-center">
 			    	<a @click="adoptarGeneral" class="btn btn-success" role="button"><b>¡Quiero adoptar!</b></a>
 			    </div>
+			    <div>
+			    <b-table striped hover :items="items" :fields="fields"></b-table>
+			  </div>
 				
 				
 				
@@ -157,6 +160,11 @@ h2::after {
 	    		console.log(id);
 	    		this.tipo_adopcion = 2;
 	    		this.$modal.show('adoptar');
+	    		this.$notify({
+		            group: 'ingresado',
+		            title: '¡Solicitud enviada!',
+		            text: 'Tu solicitud ha sido enviada con éxito.'
+		          });
 	    	},
 	    	cerrar: function(){
 	    		this.abierto = false;

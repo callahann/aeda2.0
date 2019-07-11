@@ -84,7 +84,6 @@
       "url": "https://placedog.net/400/400/511",
       "disponible": true
     }
-    
   ],
   "solicitudes": [
     {
@@ -116,8 +115,27 @@
       "telefono": "87654321",
       "descripcion": "Me gustan los perros y estoy dispuesta a adoptar cualquiera.",
       "pendiente": true
+    },
+    {
+      "nombre": "Felipe",
+      "apellido": "Ruiz",
+      "correo": "felipe.r.f@gmail.com",
+      "telefono": "927344859",
+      "descripcion": "Porque la encontré muy hermosa y es del tamaño adecuado para tenerla conmigo",
+      "perro_id": 8,
+      "pendiente": true,
+      "id": 4
+    },
+    {
+      "nombre": "Gabriela",
+      "apellido": "Díaz",
+      "correo": "Gaby_284@mail.com",
+      "telefono": "927483748",
+      "descripcion": "Porque desde hace tiempo que busco una mascota",
+      "perro_id": 0,
+      "pendiente": true,
+      "id": 5
     }
-   
   ],
   "noticias": [
     {
@@ -194,6 +212,15 @@
       "descripcion": "Me gustaría pertenecer a la agrupación porque me gustan mucho los animales y tengo muchas ideas nuevas para poder ayudar y mejorar la vida de los perritos.",
       "correo": "sofia.fuentes@usach.cl",
       "telefono": "918227364"
+    },
+    {
+      "nombre": "Felipe",
+      "pendiente": true,
+      "apellido": "Montoya",
+      "correo": "f.m.123@mail.com",
+      "telefono": "9274857384",
+      "descripcion": "Porque siempre he querido participar",
+      "id": 3
     }
   ],
   "contador": [

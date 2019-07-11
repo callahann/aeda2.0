@@ -59,6 +59,7 @@
 				<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
 					<i class="fa fa-angle-right"></i>
 				</a>
+				<notifications group="ingresado" />
 			</div>
 		
 			<modal v-if="abierto" name="inscribirme" :clickToClose="false" :width="800" height="auto" :scrollable="true">
@@ -95,7 +96,7 @@
 						  </div>
 						  
 						
-						  <button type="submit" @click="adoptar" class="btn btn-primary">Enviar</button>
+						  <button type="submit" @click="enviar" class="btn btn-primary">Enviar</button>
 						</form>
 				  	</div>
 
@@ -169,7 +170,28 @@ h2::after {
 	    	cerrar: function(){
 	    		this.abierto = false;
 	    		this.$modal.hide('inscribirme');
-	    	}
+	    	},
+	    	enviar: function(){
+				var datos = {
+					nombre: this.nombre,
+					pendiente: true,
+					apellido: this.apellido,
+					correo: this.correo,
+					telefono: this.telefono,
+					descripcion: this.descripcion,		
+				}
+				axios.post('http://localhost:3000/voluntariados', datos)
+				.then(response => {
+					console.log('se hizo');
+					this.$emit('exit', true);
+				});
+				this.$modal.hide('inscribirme');
+				this.$notify({
+		            group: 'ingresado',
+		            title: '¡Solicitud enviada!',
+		            text: 'Tu solicitud ha sido enviada con éxito.'
+		          });
+			}
 	    },
 	     components: {
 			'Nav': Nav
