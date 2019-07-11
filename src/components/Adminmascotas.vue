@@ -132,6 +132,11 @@
               });
             })
           })
+          this.$notify({
+                group: 'ingresado',
+                title: '¡Mascota borrada!',
+                text: 'La mascota ha sido borrada con éxito.'
+              });
         },
         closeModal: function(){ 
           this.abierto = false;

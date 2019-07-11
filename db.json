@@ -80,9 +80,23 @@
     {
       "id": 12,
       "nombre": "Mía",
-      "descripcion": "Es una cachorrita de 5 meses, hoy busca una familia para entregarle amor y felicidad, es muy tranquila y regalora.",
+      "descripcion": "Es una cachorrita de 5 meses, hoy busca una familia para entregarle amor y felicidad, es muy tranquila y regalona.",
       "url": "https://placedog.net/400/400/511",
       "disponible": true
+    },
+    {
+      "nombre": "efwff",
+      "descripcion": "wefwef",
+      "url": "https://placedog.net/400/400/517",
+      "disponible": false,
+      "id": 13
+    },
+    {
+      "nombre": "wqdd",
+      "descripcion": "qwdqwd",
+      "url": "https://placedog.net/400/400/518",
+      "disponible": false,
+      "id": 14
     }
   ],
   "solicitudes": [
@@ -133,7 +147,7 @@
       "telefono": "927483748",
       "descripcion": "Porque desde hace tiempo que busco una mascota",
       "perro_id": 0,
-      "pendiente": true,
+      "pendiente": false,
       "id": 5
     }
   ],
@@ -215,7 +229,7 @@
     },
     {
       "nombre": "Felipe",
-      "pendiente": true,
+      "pendiente": false,
       "apellido": "Montoya",
       "correo": "f.m.123@mail.com",
       "telefono": "9274857384",
@@ -226,7 +240,7 @@
   "contador": [
     {
       "id": 0,
-      "numero": 16
+      "numero": 18
     }
   ]
 }
